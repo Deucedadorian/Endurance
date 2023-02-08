@@ -1,0 +1,266 @@
+;Comments in this file are preceeded by a semicolon
+;Format of a line is:
+;Event code, filename , text
+;File name is the file that the event viewer will display for the event code
+;Text is the text that event viewer will display for the event code
+;White space is ignored
+;Delimiters is a comma
+
+
+
+0,,				Power down
+1,,				Power up
+2,,				Records Initialized 
+3,,				ERI connected
+4,,				ERI connection terminated
+5,,				Entered halt state
+6,,				Entered calm state
+7,,				Entered cut-in state
+8,,				Entered free-wheel state
+9,,				Entered motor state
+10,,				Entered generate low state
+11,,				Entered generate high state
+12,,				Entered high wind state
+13,,				Entered fault state (LSS overspeed)
+14,,				Entered fault state (HSS overspeed)
+15,,				Entered fault state (RPM error)
+16,,				Entered warning state (Anemometer error)
+17,,				Entered warning state (Motor error)
+18,,				Entered warning state (Grid fault)
+19,,				Entered warning state (Unknown fault)
+20,	Halt_0.wmf,		Halt state (0) (key is off)
+21,	Halt_1.wmf,		Halt state (1) (ERI halt is active)
+22,	Halt_2.wmf,		Halt state (2) (Going to calm) 
+23,,				
+24,,				
+25,,				Diagnostic trigger occured
+26,,				Diagnostic trigger (manually)
+27,,				Diagnostic trigger cleared
+28,,				External watchdog enabled
+29,,                    External watchdog disabled
+30,	Calm_0.wmf,		Calm state (0)
+31,	Calm_1.wmf,		Calm state (1)
+32,	Calm_2.wmf,		Calm state (2)
+33,	Calm_3.wmf,		Calm state (3)
+34,,
+35,,
+36,,
+37,,
+38,,
+39,,
+40,	Cutin_0.wmf,		Cut-in state (0)
+41,	Cutin_1.wmf,		Cut-in state (1)
+42,	Cutin_2.wmf,		Cut-in state (2) 
+43,	Cutin_3.wmf,		Cut-in state (3)
+44,	Cutin_4.wmf,		Cut-in state (4)  
+45,	Cutin_5.wmf,		Cut-in state (5)
+46,	Cutin_6.wmf,		Cut-in state (6)
+47,,
+48,,
+49,,
+50,	FreeWheel_0.wmf,	Free-wheel state (0)
+51,	FreeWheel_1.wmf,	Free-wheel state (1)
+52,	FreeWheel_2.wmf,	Free-wheel state (2)
+53,	FreeWheel_3.wmf,	Free-wheel state (3)
+54,	FreeWheel_4.wmf,	Free-wheel state (4)
+55,	FreeWheel_5.wmf,	Free-wheel state (5)
+56,	FreeWheel_6.wmf,	Free-wheel state (6)
+57,,
+58,,
+59,,
+60,	Motor_0.wmf,		Motor state (0)
+61,	Motor_1.wmf,		Motor state (1)
+62,	Motor_2.wmf,		Motor state (2)
+63,	Motor_3.wmf,		Motor state (3)
+64,	Motor_4.wmf,		Motor state (4)
+65,,
+66,,
+67,,
+68,,
+69,,
+70,	Generate low_0.wmf,
+71,	Generate low_1.wmf,		Generate low state (1)
+72,	Generate low_2.wmf,		Generate low state (2)
+73,	Generate low_3.wmf,		Generate low state (3)
+74,	Generate low_4.wmf,		Generate low state (4)
+75,	Generate low_5.wmf,		Generate low state (5)
+76,	Generate low_6.wmf,		Generate low state (6)
+77,	Generate low_7.wmf,		Generate low state (7)
+78,,
+79,,
+80,	Generate high_0.wmf,	Generate high state (0)
+81,	Generate high_1.wmf,	Generate high state (1)
+82,	Generate high_2.wmf,	Generate high state (2)
+83,	Generate high_3.wmf,	Generate high state (3)
+84,	Generate high_4.wmf,	Generate high state (4)
+85,,
+86,,
+87,,
+88,,
+89,,
+90,	High wind_0.wmf,		High wind (0)
+91,	High wind_1.wmf,		High wind (1)
+92,	High wind_2.wmf,		High wind (2)
+93,	High wind_3.wmf,		High wind (3)
+94,
+95,
+96,
+97,
+98,
+99,,
+100,	Fault_0.wmf,		Fault state (LSS overspeed) (0)
+101,	Fault_3.wmf,		Fault state (HSS overspeed) (0)
+102,	Fault_6.wmf,		Fault state (RPM error) (0)
+103,	Fault_1.wmf,		Fault state (LSS overspeed) (1)
+104,	Fault_4.wmf,		Fault state (HSS overspeed) (1)
+105,	Fault_7.wmf,		Fault state (RPM error) (1)
+106,	Fault_2.wmf,		Fault state (LSS overspeed) (2)
+107,	Fault_5.wmf,		Fault state (HSS overspeed) (2)
+108,	Fault_8.wmf,		Fault state (RPM error) (2)
+109,,
+110,	Warning_3.wmf,		Warning state (Anemometer error) (0)
+111,	Warning_6.wmf,		Warning state (Motor error) (0)
+112,	Warning_0.wmf,		Warning state (Grid fault) (0)
+113,	Warning_4.wmf,		Warning state (Anemometer error) (1)
+114,	Warning_7.wmf,		Warning state (Motor error) (1)
+115,	Warning_1.wmf,		Warning state (Grid fault) (1)
+116,	Warning_5.wmf,		Warning state (Anemometer error) (2)
+117,,
+118,	Warning_2.wmf,		Warning state (Grid fault) (2)
+119,,
+120,,				Halt command from ERI
+121,,				Run command from ERI
+122,,				Service hours cleared by ERI
+123,,				Clear max from ERI
+124,,				Clear events from ERI
+125,,				Old time
+126,,				New time
+127,,				Old date
+128,,				New date
+129,,				IP settings changed
+130,,				Normal run
+131,,				Overspeed test 
+132,,				RPM error test 
+133,,				Cutout test
+134,,				Anemometer test
+135,,
+136,,
+137,,
+138,,
+139,,
+140,,
+141,,
+142,,
+143,,
+144,,
+145,,
+146,,
+147,,
+148,,
+149,,
+150,,
+151,,
+152,,
+153,,
+154,,
+155,,
+156,,
+157,,
+158,,
+159,,
+160,,
+161,,
+162,,
+163,,
+164,,
+165,,
+166,,
+167,,
+168,,
+169,,
+170,,
+171,,
+172,,
+173,,
+174,,
+175,,
+176,,
+177,,
+178,,
+179,,
+180,,
+181,,
+182,,
+183,,
+184,,
+185,,
+186,,
+187,,
+188,,
+189,,
+190,,
+191,,
+192,,
+193,,
+194,,
+195,,
+196,,
+197,,
+198,,
+199,,
+200,,
+201,,
+202,,
+203,,
+204,,
+205,,
+206,,
+207,,
+208,,
+209,,
+210,,
+211,,
+212,,
+213,,
+214,,
+215,,
+216,,
+217,,
+218,,
+219,,
+220,,
+221,,
+222,,
+223,,
+224,,
+225,,
+226,,
+227,,
+228,,
+229,,
+230,,
+231,,
+232,,
+233,,
+234,,
+235,,
+236,,
+237,,
+238,,
+239,,
+240,,
+241,,
+242,,
+243,,
+244,,
+245,,
+246,,
+247,,
+248,,
+249,,
+250,,
+251,,
+252,,
+253,,
+254,,
+255,,

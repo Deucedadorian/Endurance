@@ -1,0 +1,613 @@
+/*** BeginHeader  ********************************************/
+#ifndef __UDPDOWNL
+#define __UDPDOWNL
+/*** EndHeader ***********************************************/
+
+/* START LIBRARY DESCRIPTION *********************************************
+UDPDOWNL.LIB
+	Copyright (c) 2003-2004, SHDesigns, www.shdesigns.org
+	This source may not be distributed without permission from SHDesigns.
+
+Version 1.4 revisions:
+	Version 1.4a 5-19-2003
+			Added separate I&D support
+	Version 1.4b 6-01-2003
+			Rewrite code that copies code to RAM.
+			Separate I&D support completed.
+			BL2500C support added
+	Version 1.4c 6-03-2003
+			Fixed defines for DC versions less than 7.32.
+	Version 1.4d 6-26-2003
+			Fixed problem on 3200 board passing IP address
+	Version 1.4e 7-10-2003
+			After fixing problems with the RCM2000 on the
+			serial loader, the changes were implemented here. These changes
+			reduce the chance of data corruption and also set up the stack
+			and data segments so the RAM loader will run with buggy bios.
+	Version 1.4f 7-25-2003
+			Fixed XMEM_SIZE problem
+	Version 1.4g 8-1-2003
+			Fixed UDPDL_tick() to return 1 when run command received
+			Added set specific IP command. Only set IP if the MAC matches ours.
+	Version 1.4h 8-16-2003, 8-1 version had bug with flag variable. It would
+			fail with the RAM loader downloaded but would work with loader in FLASH.
+	Version 1.4i 9-12-2003
+			Fixed smal problem with forcing the use of the RAM loader.
+	Version 1.4j 10-7-2003
+			Changed UDPDL_Init() to specify the IF_ETH0 interface explicitly. This
+			helps if multiple interfaces are defined.
+			Similar change to the calls to gethostid() and p_getaddress()
+	Version 1.4k 10-8-2003
+			Made change to gethostid() to inly be used in DC>7.30,
+			7.2x does not support the interface array referenced.
+	Version 1.4l 11-19-2003
+			The Set IP function did not specify the ethernet interface.
+			This used the default and would not work if the ethernet is not
+			the default interface.
+
+Version 1.5 revisions:
+	Version 1.5a	7-14-2004
+			Fixed problem with FAST_RAM_COMPILE for older compilers.
+			Fixed _CPU_ID_==R3000, the new 3000a chip will fail this test.
+			Forced reset of interrupt regs to 0 as to not cause problems
+				if the shadow regs are not valid.
+	Version 1.5b	8-31-2004
+			Minor cleanups. Support for unfinished Verify option.
+
+	Version 1.5c	9-4-2004
+			Added support to append the MAC address to the
+			query response. PC Utility V2.1D will display this
+			automatically.
+	Version 1.5d	10-20-2004
+			Fixed missing nodebug option on #asm
+			this caused the RAM loader to fail if ASM single-step
+			was enabled in the compiler.
+	Version 1.5e	11-9-2004
+			Added Support for the RCM3300
+			Fix problem where RAM loader crossed a 64k address
+	Version 1.5f	Fix undefined RCM3800A for old compilers
+
+Version 1.6 revisions:
+	Version 1.6a	2-16-2005
+			Added variable port number, only works with generic loaders
+				dated 2-18-05 or later.
+			Fix for RAM loader corruption on some boards with 256k or 512k RAM.
+	Version 1.6b	7-25-2005
+			Added board type defines for older compilers.
+	Version 1.6c	8-21-2005
+			Removed tcp_tick(&udp_sock), may cause corruption in newer stacks.
+	Version 1.6d	12-22-2005
+			Added additional checks to RUN command.
+
+Version 1.7 Revisions:
+	Version 1.7a	10-31-2007
+		Added support for RCM4200
+		Fix for RCM3800
+
+DESCRIPTION:
+	Network Download via UDP.
+
+SUPPORT LIB'S:
+END DESCRIPTION **********************************************************/
+
+/* START FUNCTION DESCRIPTION ********************************************
+UDPDL_Init()                       <UDPDOWNL.LIB>
+
+SYNTAX: int UDPDL_Init(char * id);
+
+PARAMETER1: String to report to downloader
+				Use NULL to use the default string.
+				Note: the library only stores a pointer to the string data,
+					so the data must be static.
+
+KEYWORDS: download
+
+DESCRIPTION: Initialize the download manager. The string will appear in the list of
+	boards ready to download in the PC download app.
+	Note: This must be called AFTER sock_init() and the board has a valid IP address;
+	If the IP address is changed via sethostid() or ifconfig() means,
+		UDPDL_Init() must be re-called to update the socket connection.
+
+RETURN VALUE:	int - 0 if ok, 1 if error (would likely be
+		 socket init failure due to insufficient UDP sockets or buffers.)
+END DESCRIPTION **********************************************************/
+/*** BeginHeader  UDPDL_Init */
+#use udpdnld.h
+int UDPDL_Init(char * str);
+// dl_flags bits
+#define DL_RUN_PENDING 1
+#define DL_SIZE_REQUEST 2
+#define DL_SOCKET_OPEN 4
+// put global stuff in a structure to reduce possible global name conflicts.
+
+struct {
+	unsigned ram_size;
+	unsigned long ram_address;
+	unsigned udpdl_port;
+	char * id_string;
+	udp_Socket udp_dl_sock;
+	char flags;
+} _dl_data;
+#define RAM_SIZE_OFFSET 0
+#define RAM_ADDRESS_OFFSET 2
+#define UDP_PORT_OFFSET 6
+
+// if loader is included, use it
+#ifdef UDPDL_LOADER
+#ximport UDPDL_LOADER _udp_dl_loader
+#endif
+/*** EndHeader */
+
+int UDPDL_Init(char * str)
+{
+#GLOBAL_INIT {
+	_dl_data.flags=0;
+	_dl_data.udpdl_port=DNLD_UDP_PORT;
+};
+	_dl_data.ram_size=0;
+	_dl_data.flags=0;
+	_dl_data.ram_address=0l;
+	_dl_data.id_string=str;
+	if (str==NULL)
+		_dl_data.id_string="Rabbit Board UDP Download";
+	if (_dl_data.flags&DL_SOCKET_OPEN)
+	{
+		sock_close(&_dl_data.udp_dl_sock);
+		_dl_data.flags=0;
+	}
+	if (!udp_extopen(&_dl_data.udp_dl_sock, IF_ETH0, _dl_data.udpdl_port, -1L, -1, NULL, 0, 0))
+	//if (!udp_open(&_dl_data.udp_dl_sock, DNLD_UDP_PORT, -1,-1, NULL))
+	{
+#if DEBUG_RST
+		printf("UDPDL-udp_open socket failed!\r\n");
+#endif
+		return 1;
+	}
+	_dl_data.flags|=DL_SOCKET_OPEN;	// tell future calls socket is open.
+	return 0;
+}
+
+/*** BeginHeader  UDPDL_SetPort */
+void UDPDL_SetPort(unsigned port);
+/*** EndHeader */
+
+void UDPDL_SetPort(unsigned port)
+{
+	_dl_data.udpdl_port=port;
+}
+
+
+/*** BeginHeader  */
+#ifndef RCM3200
+// this gets rid of error on older compilers.
+#define RCM3200 0
+#endif
+#ifndef BL2500C
+#define BL2500C 0
+#endif
+#ifndef RCM3800A
+// this gets rid of error on older compilers.
+#define RCM3800A 0
+#endif
+
+#ifndef RCM3220A
+// this gets rid of error on older compilers.
+#define RCM3220A 0
+#endif
+
+#ifndef EM1500A
+// this gets rid of error on older compilers.
+#define EM1500A 0
+#endif
+
+#ifndef RCM3300A
+// this gets rid of error on older compilers.
+#define RCM3300A 0
+#endif
+
+#ifndef BL2600D
+// this gets rid of error on older compilers.
+#define BL2600D 0
+#endif
+
+#ifndef BL2600A
+// this gets rid of error on older compilers.
+#define BL2600A 0
+#endif
+
+#ifndef RCM4200
+// this gets rid of error on older compilers.
+#define RCM4200 0
+#endif
+
+#ifndef RCM3900
+// this gets rid of error on older compilers.
+#define RCM4200 0
+#endif
+
+//7-14-2004 fix for 7.2x compiler.
+#ifndef FAST_RAM_COMPILE
+#define FAST_RAM_COMPILE 0
+#endif
+#define CS2_MAP 0xc5
+
+#if !FAST_RAM_COMPILE
+#if ((_BOARD_TYPE_ == RCM3200) || (_BOARD_TYPE_ == RCM3220A) \
+    || (_BOARD_TYPE_ == BL2500C) || (_BOARD_TYPE_ == EM1500A) \
+    || ((_BOARD_TYPE_ >= RCM3300A) && (_BOARD_TYPE_ <= (RCM3300A+0x00FF))) \
+    || ((_BOARD_TYPE_ >= RCM3900) && (_BOARD_TYPE_ <= (RCM3900+0x00FF))) \
+    || ((_BOARD_TYPE_ >= RCM4200) && (_BOARD_TYPE_ <= (RCM4200+0x00FF))) \
+    || ((_BOARD_TYPE_ == RCM3800A) && (_BOARD_TYPE_ <= (RCM3800A+0x00FF))) \
+    || (_BOARD_TYPE_ == BL2600A) || (_BOARD_TYPE_ == BL2600D))
+#define USE_CS2
+#endif
+#endif
+
+#ifdef USE_CS2
+#define SET_NORM_CS2 $\
+		ld		a,c $\
+		ioi ld (MB2CR),a
+#else
+#define SET_NORM_CS2
+#endif
+
+#ifdef USE_CS2
+#define SET_256K_CS2 $\
+		ld		a,CS2_MAP $\
+		ioi	ld (MB2CR),a
+#else
+#define SET_256K_CS2
+#endif
+/*** EndHeader */
+
+/*** BeginHeader  _run_loader */
+nodebug root void _run_loader();
+/*** EndHeader */
+nodebug root void _run_loader()
+{
+	auto long ip;
+// fix default interface in 7.3x and 8.x stacks.
+#if CC_VER>0x730
+		ip=htonl(_if_tab[IF_ETH0].ipaddr);
+#else
+		ip=htonl(gethostid());
+#endif
+#if DEBUG_RST
+		printf("Run RAM Downloader - my ip should be %lx\n",ip);
+#endif
+#define LOADER_COPY 0x80000l
+#define LOADER_SEG 0x8
+		// THIS is the only thing that is not "clean" as far as RAM addresses
+		// use top of 128k ram to pass ip address
+#asm nodebug
+
+		ipset 3;	// disable ints
+		// disable wd
+		ld 	a,0x51
+		ioi  	ld (WDTTR),a
+		ld 	a,0x54
+		ioi  	ld (WDTTR),a
+		// disable all hardware interrupts
+		xor	a
+		ioi ld	(SACR),a
+		ioi ld	(SBCR),a
+		ioi ld	(SCCR),a
+		ioi ld	(SDCR),a
+		ioi ld	(TACR),a
+		ioi ld	(TBCR),a
+		ld	a,0x80
+		ioi ld	(SPCR),a
+		xor	a
+		ioi ld	(I0CR),a
+		ioi ld	(I1CR),a
+		ld	a,(GCSRShadow)
+		and	0xfc
+		ioi ld	(GCSR),a
+		ioi	ld	a,(GCSR)	// clear periodic int
+		ioi	ld	a,(TBCSR)	// clear timerb irq
+		ioi ld	a,(TACSR)	// clear timer a irq
+// older version fo the compiler do not have _CPU_ID_
+#if CC_VER>0x721
+#if (CPU_ID_MASK(_CPU_ID_) >= R3000)
+		xor	a
+		ioi ld	(SECR),a
+		ioi ld	(SFCR),a
+		ioi ld	(QDCR),a
+		ioi ld	(ICCR),a
+		ioi	ld	(MECR),a
+		ld	a,0x80
+		ioi ld (BDCR),a
+		ioi	ld	a,(QDC1R)	// crear qd irq
+		ioi	ld	a,(QDC2R)	// crear qd irq
+		ioi	ld	a,(ICCSR)	// clear any input capture int
+#endif
+#endif
+ 		xor	a
+		ioi		ld (GCDR),a	// turn off clock doubler
+// copy to ram
+; // copy ip/port to alt regs, later copy to reserved loader area
+		ld		hl,(_dl_data+UDP_PORT_OFFSET)
+		ld		b,h
+		ld		c,l
+		ld 	hl,(sp+@SP+ip+2)
+		ex		de,hl
+		ld 	hl,(sp+@SP+ip)
+		exx
+
+#ifdef USE_CS2
+      ld		a,(MB2CRShadow)
+      ld		c,a
+#endif
+
+// map back to flash
+		SET_NORM_CS2
+;//now copy loader
+		ld	ix,(_dl_data+RAM_ADDRESS_OFFSET)
+		ld	a,(_dl_data+RAM_ADDRESS_OFFSET+2)
+		ld	b,a
+		ld	de,(_dl_data+RAM_SIZE_OFFSET)			;// get count
+		inc	de
+		xor 	a	// clear carry
+		rr	de			// divide by 2
+		ld	iy,0
+		ld		sp,2
+copy_ldr:
+		SET_NORM_CS2
+		ld		a,b			// ram loader seg
+		ldp		hl,(ix)
+		add		ix,sp
+		jr		nc,same_seg
+		inc		b           ; next 64k
+same_seg:
+		SET_256K_CS2
+		ld		a,LOADER_SEG
+		ldp		(iy),hl
+		add		iy,sp
+		// see if source 64k rollover
+		dec		de
+		ld		a,d
+		or		e
+		jr		nz,copy_ldr
+		ioi		ld	a,(MMIDR)
+		and		a,0x90
+		ioi		ld (MMIDR),a	// disable separate I&D
+		SET_256K_CS2
+		ld 		hl, 0xdfff		// stack in root
+		ld 		sp, hl
+		ld		iy,0xe000
+		ld		ix,_J2Ram
+		ld		b,20		// RCODE_SIZE does not work!, 30 is plenty
+		ld		de,2
+ldirfix:
+		xor		a
+		ldp		hl,(ix)
+		ld		a,LOADER_SEG
+		ldp		(iy),hl
+		add		ix,de
+		add		iy,de
+		djnz	ldirfix
+
+		exx				; restore IP in DE:HL
+		ld		ix,0xfff8
+		ld		a,LOADER_SEG+1
+		ldp		(ix),hl
+		inc		ix
+		inc		ix
+		ex		de,hl
+		ldp		(ix),hl
+		inc		ix
+		inc		ix
+
+		ld			h,b
+		ld 		l,c
+		ldp		(ix),hl
+		inc		ix
+		inc		ix
+		ld			a,h
+		cpl
+		ld			h,a
+		ld			a,l
+		cpl
+		ld			l,a
+		ld		a,LOADER_SEG+1
+		ldp		(ix),hl
+
+		db		0xc7,0x00,0xe0,0x80	// ljump to 8e000
+#endasm
+#asm nodebug
+_J2Ram::
+        // First quadrant is RAM
+		ld		a,CS2_MAP			; get RAM_CS
+      ioi     ld (MB0CR),a
+      ioi     ld (MB1CR),a
+		ld		a,0x8
+		ioi	ld (STACKSEG),a	// stack seg in root space
+		ioi	ld	(DATASEG),a
+		ld		a,0xd8
+		ioi	ld (SEGSIZE),a
+#if (CPU_ID_MASK(_CPU_ID_) == R4000)
+		ld		a,0x00
+		ioi ld (EDMR),a
+      nop
+      nop
+#endif
+		jp		0
+#endasm
+		// we will never return
+}
+
+/*** BeginHeader  UDPDL_Tick */
+int UDPDL_Tick();
+/*** EndHeader */
+
+/* START FUNCTION DESCRIPTION ********************************************
+int UDPDL_Tick();                       <UDPDOWNL.LIB>
+
+SYNTAX: int UDPDL_Tick();
+
+PARAMETERS:
+
+KEYWORDS: download
+
+DESCRIPTION: Checks for download request and processes Queries.
+
+RETURN VALUE:	0=if no download request
+					1=if Download requested
+Note: When this function returns 1 the user could should do the following:
+1. Free up some xmem if not enough free (needs about 23k.)
+2. Shut down user functions like interrupts and threads
+
+After this routine returns 1, at some later call, the ram loader
+will be executed and any user code may be lost. This return allows user
+code to exit gracefully. I.e. flush buffers, close connections. Turn off
+power to devices.
+
+Note: downloads can not be run under the debugger, the DC IDE will get confused
+ and reset the board.
+
+For fastest download, it can be polled as follows:
+// part of main loop .
+	if	(UDPDL_Tick())
+	{
+		// Free mem and stop interrupts, i.e.
+		//xrelease(my_xmem_buff);  // only needed if less than 23k avail
+		//TimerBUninit(); // stop timer ints
+		while (1)
+			UDPDL_Tick();	// do nothing else!
+	}
+END DESCRIPTION **********************************************************/
+
+nouseix int UDPDL_Tick()
+{
+	auto UDP_DBG_HEADER * up;
+	auto int len;
+	auto char buff[ETH_MTU-32];	// allow room for max code block
+	auto char mac[6];
+	static word port;
+	static unsigned long ip;
+	up=(UDP_DBG_HEADER *)buff;
+   if (!_dl_data.flags&DL_SOCKET_OPEN)
+   	return 0;
+	if (_dl_data.flags&DL_RUN_PENDING) // no need to clear flags, we're history anyway.
+	{
+#ifdef UDPDL_LOADER
+		if (_dl_data.ram_address==0l)
+		{
+				xmem2root(&_dl_data.ram_size,_udp_dl_loader,2);	// only get low bytes
+				_dl_data.ram_address=_udp_dl_loader+4;
+		}
+#endif
+			_run_loader();
+	}
+	if (_dl_data.flags&DL_SIZE_REQUEST)
+	{
+		if (xavail(NULL)>_dl_data.ram_size)
+		{
+			up->status=UDPDNLD_STATUS_ACK;
+			_dl_data.ram_address=xalloc(_dl_data.ram_size);
+		}
+		else
+			UDPDNLD_STATUS_NOMEM;
+		up->length=0;
+		udp_sendto(&_dl_data.udp_dl_sock, buff, UDP_DBG_HEADER_SIZE,ip,port);
+#if DEBUG_RST
+		printf("Set XMEM RAM size %d\n",_dl_data.ram_size);
+#endif
+		_dl_data.flags&=~DL_SIZE_REQUEST;
+		return 1;
+	}
+// 08-21-2005 removed
+//	tcp_tick(&_dl_data.udp_dl_sock);
+	len= udp_recvfrom(&_dl_data.udp_dl_sock, buff, sizeof(buff),&ip,&port);
+	if (len>0)
+	switch (up->cmd)
+	{
+#ifdef UDP_DUMP_SUPPORT
+		case UDPDNLD_READ:
+			if (up->length!=0) // check valid, no data
+				return 0; // spurious packet
+			xmem2root(up->address,up->data,512);
+			up->length=512;
+			udp_sendto(&_dl_data.udp_dl_sock, buff, UDP_DBG_HEADER_SIZE+512,ip,port);
+#if DEBUG_RST
+			printf("Query from %lx port %d\n",ip,port);
+#endif
+			break;
+#endif
+		case UDPDNLD_QUERY:
+			if (up->length!=0) // check valid, no data
+				return 0; // spurious packet
+			len=strlen(_dl_data.id_string);
+			if (len>79)
+				len=79;
+			memcpy(up->data,_dl_data.id_string,len);
+			up->data[len]='\0';
+			len++;
+			pd_getaddress(0,mac);
+			sprintf(up->data+len," %02x:%02x:%02x:%02x:%02x:%02x",
+			mac[0],mac[1],mac[2],
+			mac[3],mac[4],mac[5]);
+			len=len+strlen(up->data+len);
+#ifdef UDPDL_LOADER
+			up->status=	UDPDNLD_STATUS_RAM_CODE_IN_XMEM;	// tell downloader we have loader in xmem
+#else
+			up->status=	UDPDNLD_STATUS_NEED_CODE;	// tell downloader to send us loader
+#endif
+			up->address=ETH_MTU;	// used by downloader
+			up->length=len+1;
+			udp_sendto(&_dl_data.udp_dl_sock, buff, UDP_DBG_HEADER_SIZE+1+len,ip,port);
+#if DEBUG_RST
+			printf("Query from %lx port %d\n",ip,port);
+#endif
+			return 0;
+		// this is only called if loadein is not in FLASH
+		case UDPDNLD_XMEM_SIZE:	// prepare for download
+			if (up->length!=0) // check valid, no data
+				return 0; // spurious packet
+			_dl_data.ram_size=(unsigned)up->address;	// how much mem we will need later.
+			_dl_data.ram_address=0l;
+			_dl_data.flags|=DL_SIZE_REQUEST;
+			return 1;	// tell caller we will be downloading soon!
+		case UDPDNLD_DOWNLOAD_RAM:	// here's boot loader ;)
+			if (_dl_data.ram_address==0l)
+			{
+				// if due to some error we have no RAM address allocated, default to arbitrary address
+				if (_dl_data.ram_size==0)
+					_dl_data.ram_size=31*1024;	// big buff if unknown
+				_dl_data.ram_address=xalloc((long)_dl_data.ram_size+8l);
+#if DEBUG_RST
+			printf("Allocated %d bytes at %lx\n",_dl_data.ram_size+8,_dl_data.ram_address);
+#endif
+			}
+			root2xmem(_dl_data.ram_address+up->address,&up->data,up->length);	// copy 2 xmem
+			up->status=_dl_data.ram_address!=0?UDPDNLD_STATUS_ACK:UDPDNLD_STATUS_NOMEM;
+#if DEBUG_RST
+			printf("Download %d bytes at %lx\n",up->length,_dl_data.ram_address+up->address);
+#endif
+			up->length=0;
+			udp_sendto(&_dl_data.udp_dl_sock, buff,UDP_DBG_HEADER_SIZE,ip,port);;
+			return 0;
+		case UDPDNLD_RUN: // off we go!
+			if (up->length!=0) // check valid, no data
+				return 0; // spurious packet
+			if (up->address!=0l) // check valid, no data
+				return 0; // spurious packet
+			_dl_data.flags|=DL_RUN_PENDING;
+			return 1;
+		case UDPDNLD_SET_SPECIFIC_IP:
+			pd_getaddress(IF_ETH0,mac);
+			if (memcmp(&up->data,mac,6)!=0)
+				return 0;
+			// fall into set IP.
+		case UDPDNLD_SET_IP:
+			sethostid(up->address);
+			// ip has changed so we need to close and reopen socket.
+			sock_close(&_dl_data.udp_dl_sock);
+			udp_extopen(&_dl_data.udp_dl_sock, IF_ETH0, _dl_data.udpdl_port, -1L, -1, NULL, 0, 0);
+	}
+	return 0;
+}
+//
+/*** BeginHeader  ********************************************/
+#endif
+/*** EndHeader ***********************************************/
