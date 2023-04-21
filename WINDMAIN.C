@@ -479,7 +479,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 //For implementing the download manager                                      //
-#define	UDP_SOCKETS 1                                                       //
+#define	UDP_SOCKETS 1                                                        //
 #define  MAX_UDP_SOCKET_BUFFERS 1                                            //
                                                                              //
 // define this string to inlcude the RAM loader in FLASH,                    //
@@ -492,13 +492,13 @@
 
 ///////////////////////////////////////////////////////////////////////////////
 //For testing only:                                                          //
-#define	STDIO_DEBUG_SERIAL	SADR                                           //
-#define	STDIO_DEBUG_BAUD		57600                                          //
+#define	STDIO_DEBUG_SERIAL	SADR                                             //
+#define	STDIO_DEBUG_BAUD		57600                                        //
                                                                              //
 // Add this line to add carriage returns ('\r') to each newline              //
 // char ('\n') when sending printf output to a serial port.                  //
                                                                              //
-#define	STDIO_DEBUG_ADDCR                                                   //
+#define	STDIO_DEBUG_ADDCR                                                    //
 ///////////////////////////////////////////////////////////////////////////////
 
 typedef unsigned long ULONG;
