@@ -54,6 +54,7 @@ step 3: configure your virtual machine for communication with Rabbit
 8. input the IP address '192.168.0.50'
 9. input the Subnet mask '255.255.255.0'
 10. click OK and close the rest of the windows that were opened during this process
+
 ![steps 7., 8., and 9.,](/docs/images/winXPNetworkSetup6.jpg)
 
 follow Complete Communication Re-Configuration Procedure.pdf in /docs to complete configuration.
