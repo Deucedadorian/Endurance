@@ -23,7 +23,7 @@ different computers but if it is, you'll have to figure out which option corresp
 4. in Advanced, set adapter type to Intel Pro/1000 MT Desktop(82540EM)  
 5. you can set Promiscuous Mode to Allow All if you're feeling frisky
 
-![configuration of adapter 2](/images/network_adapter2.jpg)
+![configuration of adapter 2](/docs/images/network_adapter2.jpg)
 
 \* you'll have to figure out which option is your ethernet, either research or trial and error to figure it out!.. unless it's the same as mine lol
 
