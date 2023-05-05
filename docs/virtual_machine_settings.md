@@ -1,9 +1,7 @@
 # How to Create a Babbit Board-to-Computer Connection
 
 ### Prerequisites:
-1. 2x [TRENDnet TEW-430APB](https://www.trendnet.com/products/product-detail?prod=145_TEW-430APB)s or equivalent
-2. 2x ethernet cables
-3. computer running [Oracle VM VirtualBox](https://www.virtualbox.org/) with a Windows XP or Vista VM
+1. computer running [Oracle VM VirtualBox](https://www.virtualbox.org/) with a Windows XP or Vista VM
 
 step 1: configure wifi for vm. (probably not necessary but possibly useful)
 1. inside of VirtualBox select settings for your Virtual Machine.
