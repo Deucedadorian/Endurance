@@ -1,0 +1,443 @@
+22/06/2009,10:22:05 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:22:26 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:22:26 AM,Atempting to reconnect
+22/06/2009,10:22:26 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:22:47 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:22:47 AM,Atempting to reconnect
+22/06/2009,10:22:47 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:23:08 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:23:08 AM,Atempting to reconnect
+22/06/2009,10:23:08 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:23:29 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:23:29 AM,Atempting to reconnect
+22/06/2009,10:23:29 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:23:50 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:23:50 AM,Atempting to reconnect
+22/06/2009,10:23:50 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:24:11 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:24:11 AM,Atempting to reconnect
+22/06/2009,10:24:11 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:24:32 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:24:32 AM,Atempting to reconnect
+22/06/2009,10:24:32 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:24:53 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:24:53 AM,Atempting to reconnect
+22/06/2009,10:24:53 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:25:14 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:25:14 AM,Atempting to reconnect
+22/06/2009,10:25:14 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:25:35 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:25:35 AM,Atempting to reconnect
+22/06/2009,10:25:35 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:25:56 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:25:56 AM,Atempting to reconnect
+22/06/2009,10:25:56 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:26:17 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:26:17 AM,Atempting to reconnect
+22/06/2009,10:26:17 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:26:38 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:26:38 AM,Atempting to reconnect
+22/06/2009,10:26:38 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:26:47 AM,Socket established
+22/06/2009,10:29:23 AM,Socket error-10053 - Connection is aborted due to timeout or other failure
+22/06/2009,10:29:23 AM,Atempting to reconnect
+22/06/2009,10:29:23 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:29:26 AM,Socket established
+22/06/2009,10:56:05 AM,---------------------------
+22/06/2009,10:56:05 AM,ERI started
+22/06/2009,10:56:05 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:56:06 AM,Socket established
+22/06/2009,10:58:23 AM,Socket error-10053 - Connection is aborted due to timeout or other failure
+22/06/2009,10:58:23 AM,Atempting to reconnect
+22/06/2009,10:58:23 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:58:44 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:58:44 AM,Atempting to reconnect
+22/06/2009,10:58:44 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:05 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:59:05 AM,Atempting to reconnect
+22/06/2009,10:59:05 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:26 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:59:26 AM,Atempting to reconnect
+22/06/2009,10:59:26 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:47 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,10:59:47 AM,Atempting to reconnect
+22/06/2009,10:59:47 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:57 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,10:59:57 AM,Atempting to reconnect
+22/06/2009,10:59:57 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:58 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,10:59:58 AM,Atempting to reconnect
+22/06/2009,10:59:58 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,10:59:59 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,10:59:59 AM,Atempting to reconnect
+22/06/2009,10:59:59 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:00 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:00 AM,Atempting to reconnect
+22/06/2009,11:00:00 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:01 AM,Connect button clicked
+22/06/2009,11:00:01 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:02 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:02 AM,Atempting to reconnect
+22/06/2009,11:00:02 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:03 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:03 AM,Atempting to reconnect
+22/06/2009,11:00:03 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:04 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:04 AM,Atempting to reconnect
+22/06/2009,11:00:04 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:04 AM,User clicked cancel before a socket was established
+22/06/2009,11:00:07 AM,Connect button clicked
+22/06/2009,11:00:07 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:08 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:08 AM,Atempting to reconnect
+22/06/2009,11:00:08 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:10 AM,Socket error-10061 - Connection is forcefully rejected
+22/06/2009,11:00:10 AM,Atempting to reconnect
+22/06/2009,11:00:10 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:10 AM,Socket established
+22/06/2009,11:00:12 AM,Connect button clicked
+22/06/2009,11:00:12 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:00:12 AM,Socket established
+22/06/2009,11:14:43 AM,Socket error-10053 - Connection is aborted due to timeout or other failure
+22/06/2009,11:14:43 AM,Atempting to reconnect
+22/06/2009,11:14:43 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:15:04 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:15:04 AM,Atempting to reconnect
+22/06/2009,11:15:04 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:15:25 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:15:25 AM,Atempting to reconnect
+22/06/2009,11:15:25 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:15:46 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:15:46 AM,Atempting to reconnect
+22/06/2009,11:15:46 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:16:07 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:16:07 AM,Atempting to reconnect
+22/06/2009,11:16:07 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:16:28 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:16:28 AM,Atempting to reconnect
+22/06/2009,11:16:28 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:16:49 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:16:49 AM,Atempting to reconnect
+22/06/2009,11:16:49 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:17:10 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:17:10 AM,Atempting to reconnect
+22/06/2009,11:17:10 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:17:31 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:17:31 AM,Atempting to reconnect
+22/06/2009,11:17:31 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:17:52 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:17:52 AM,Atempting to reconnect
+22/06/2009,11:17:52 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:18:13 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:18:13 AM,Atempting to reconnect
+22/06/2009,11:18:13 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:18:34 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:18:34 AM,Atempting to reconnect
+22/06/2009,11:18:34 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:18:55 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:18:55 AM,Atempting to reconnect
+22/06/2009,11:18:55 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:19:16 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:19:16 AM,Atempting to reconnect
+22/06/2009,11:19:16 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:19:37 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:19:37 AM,Atempting to reconnect
+22/06/2009,11:19:37 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:19:58 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:19:58 AM,Atempting to reconnect
+22/06/2009,11:19:58 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:20:19 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:20:19 AM,Atempting to reconnect
+22/06/2009,11:20:19 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:20:40 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:20:40 AM,Atempting to reconnect
+22/06/2009,11:20:40 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:21:01 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:21:01 AM,Atempting to reconnect
+22/06/2009,11:21:01 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:21:02 AM,Socket established
+22/06/2009,11:21:34 AM,Lost comminucations - timed out
+22/06/2009,11:21:34 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:21:55 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:21:55 AM,Atempting to reconnect
+22/06/2009,11:21:55 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:22:16 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:22:16 AM,Atempting to reconnect
+22/06/2009,11:22:16 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:22:37 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:22:37 AM,Atempting to reconnect
+22/06/2009,11:22:37 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:22:58 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:22:58 AM,Atempting to reconnect
+22/06/2009,11:22:58 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:22:59 AM,Socket established
+22/06/2009,11:23:59 AM,Socket error-10053 - Connection is aborted due to timeout or other failure
+22/06/2009,11:23:59 AM,Atempting to reconnect
+22/06/2009,11:23:59 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:24:20 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:24:20 AM,Atempting to reconnect
+22/06/2009,11:24:20 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:24:41 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:24:41 AM,Atempting to reconnect
+22/06/2009,11:24:41 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:25:02 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:25:02 AM,Atempting to reconnect
+22/06/2009,11:25:02 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:25:23 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:25:23 AM,Atempting to reconnect
+22/06/2009,11:25:23 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:25:44 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:25:44 AM,Atempting to reconnect
+22/06/2009,11:25:44 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:26:05 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:26:05 AM,Atempting to reconnect
+22/06/2009,11:26:05 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:26:26 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:26:26 AM,Atempting to reconnect
+22/06/2009,11:26:26 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:26:47 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:26:47 AM,Atempting to reconnect
+22/06/2009,11:26:47 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:27:08 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:27:08 AM,Atempting to reconnect
+22/06/2009,11:27:08 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:27:29 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:27:29 AM,Atempting to reconnect
+22/06/2009,11:27:29 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:27:50 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:27:50 AM,Atempting to reconnect
+22/06/2009,11:27:50 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:28:11 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:28:11 AM,Atempting to reconnect
+22/06/2009,11:28:11 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:28:32 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:28:32 AM,Atempting to reconnect
+22/06/2009,11:28:32 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:28:53 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:28:53 AM,Atempting to reconnect
+22/06/2009,11:28:53 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:29:14 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:29:14 AM,Atempting to reconnect
+22/06/2009,11:29:14 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:29:35 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:29:35 AM,Atempting to reconnect
+22/06/2009,11:29:35 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:29:56 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:29:56 AM,Atempting to reconnect
+22/06/2009,11:29:56 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:30:17 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:30:17 AM,Atempting to reconnect
+22/06/2009,11:30:17 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:30:38 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:30:38 AM,Atempting to reconnect
+22/06/2009,11:30:38 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:30:59 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:30:59 AM,Atempting to reconnect
+22/06/2009,11:30:59 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:31:20 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:31:20 AM,Atempting to reconnect
+22/06/2009,11:31:20 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:31:41 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:31:41 AM,Atempting to reconnect
+22/06/2009,11:31:41 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:32:02 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:32:02 AM,Atempting to reconnect
+22/06/2009,11:32:02 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:32:23 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:32:23 AM,Atempting to reconnect
+22/06/2009,11:32:23 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:32:44 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:32:44 AM,Atempting to reconnect
+22/06/2009,11:32:44 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:33:05 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:33:05 AM,Atempting to reconnect
+22/06/2009,11:33:05 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:33:26 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:33:26 AM,Atempting to reconnect
+22/06/2009,11:33:26 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:33:47 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:33:47 AM,Atempting to reconnect
+22/06/2009,11:33:47 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:34:08 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:34:08 AM,Atempting to reconnect
+22/06/2009,11:34:08 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:34:29 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:34:29 AM,Atempting to reconnect
+22/06/2009,11:34:29 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:34:50 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:34:50 AM,Atempting to reconnect
+22/06/2009,11:34:50 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:35:11 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:35:11 AM,Atempting to reconnect
+22/06/2009,11:35:11 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:35:32 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:35:32 AM,Atempting to reconnect
+22/06/2009,11:35:32 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:35:53 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:35:53 AM,Atempting to reconnect
+22/06/2009,11:35:53 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:36:14 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:36:14 AM,Atempting to reconnect
+22/06/2009,11:36:14 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:36:35 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:36:35 AM,Atempting to reconnect
+22/06/2009,11:36:35 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:36:56 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:36:56 AM,Atempting to reconnect
+22/06/2009,11:36:56 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:37:17 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:37:17 AM,Atempting to reconnect
+22/06/2009,11:37:17 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:37:38 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:37:38 AM,Atempting to reconnect
+22/06/2009,11:37:38 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:37:59 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:37:59 AM,Atempting to reconnect
+22/06/2009,11:37:59 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:38:20 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:38:20 AM,Atempting to reconnect
+22/06/2009,11:38:20 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:38:41 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:38:41 AM,Atempting to reconnect
+22/06/2009,11:38:41 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:39:02 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:39:02 AM,Atempting to reconnect
+22/06/2009,11:39:02 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:39:23 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:39:23 AM,Atempting to reconnect
+22/06/2009,11:39:24 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:39:45 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:39:45 AM,Atempting to reconnect
+22/06/2009,11:39:45 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:40:06 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:40:06 AM,Atempting to reconnect
+22/06/2009,11:40:06 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:40:27 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:40:27 AM,Atempting to reconnect
+22/06/2009,11:40:27 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:40:48 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:40:48 AM,Atempting to reconnect
+22/06/2009,11:40:48 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:41:09 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:41:09 AM,Atempting to reconnect
+22/06/2009,11:41:09 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:41:30 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:41:30 AM,Atempting to reconnect
+22/06/2009,11:41:30 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:41:51 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:41:51 AM,Atempting to reconnect
+22/06/2009,11:41:51 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:42:12 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:42:12 AM,Atempting to reconnect
+22/06/2009,11:42:12 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:42:33 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:42:33 AM,Atempting to reconnect
+22/06/2009,11:42:33 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:42:54 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:42:54 AM,Atempting to reconnect
+22/06/2009,11:42:54 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:43:15 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:43:15 AM,Atempting to reconnect
+22/06/2009,11:43:15 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:43:36 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:43:36 AM,Atempting to reconnect
+22/06/2009,11:43:36 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:43:57 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:43:57 AM,Atempting to reconnect
+22/06/2009,11:43:57 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:44:18 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:44:18 AM,Atempting to reconnect
+22/06/2009,11:44:18 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:44:39 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:44:39 AM,Atempting to reconnect
+22/06/2009,11:44:39 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:45:00 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:45:00 AM,Atempting to reconnect
+22/06/2009,11:45:00 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:45:21 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:45:21 AM,Atempting to reconnect
+22/06/2009,11:45:21 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:45:42 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:45:42 AM,Atempting to reconnect
+22/06/2009,11:45:42 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:46:03 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:46:03 AM,Atempting to reconnect
+22/06/2009,11:46:03 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:46:24 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:46:24 AM,Atempting to reconnect
+22/06/2009,11:46:24 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:46:45 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:46:45 AM,Atempting to reconnect
+22/06/2009,11:46:45 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:47:06 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:47:06 AM,Atempting to reconnect
+22/06/2009,11:47:06 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:47:27 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:47:27 AM,Atempting to reconnect
+22/06/2009,11:47:27 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:47:48 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:47:48 AM,Atempting to reconnect
+22/06/2009,11:47:48 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:48:09 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:48:09 AM,Atempting to reconnect
+22/06/2009,11:48:09 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:48:30 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:48:30 AM,Atempting to reconnect
+22/06/2009,11:48:30 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:48:51 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:48:51 AM,Atempting to reconnect
+22/06/2009,11:48:51 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:49:12 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:49:12 AM,Atempting to reconnect
+22/06/2009,11:49:12 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:49:33 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:49:33 AM,Atempting to reconnect
+22/06/2009,11:49:33 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:49:54 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:49:54 AM,Atempting to reconnect
+22/06/2009,11:49:54 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:50:15 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:50:15 AM,Atempting to reconnect
+22/06/2009,11:50:15 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:50:36 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:50:36 AM,Atempting to reconnect
+22/06/2009,11:50:36 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:50:57 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:50:57 AM,Atempting to reconnect
+22/06/2009,11:50:57 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:51:18 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:51:18 AM,Atempting to reconnect
+22/06/2009,11:51:18 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:51:39 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:51:39 AM,Atempting to reconnect
+22/06/2009,11:51:39 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:52:00 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:52:00 AM,Atempting to reconnect
+22/06/2009,11:52:00 AM,Requesting socket for 192.168.0.62:3500
+22/06/2009,11:52:21 AM,Socket error-10060 - The attempt to connect timed out
+22/06/2009,11:52:21 AM,Atempting to reconnect
+22/06/2009,11:52:21 AM,Requesting socket for 192.168.0.62:3500
+24/06/2009,11:34:14 AM,---------------------------
+24/06/2009,11:34:14 AM,ERI started
+24/06/2009,11:34:14 AM,Requesting socket for 192.168.0.62:3500
+24/06/2009,11:34:43 AM,---------------------------
+24/06/2009,11:34:43 AM,ERI started
+24/06/2009,11:34:43 AM,Requesting socket for 192.168.0.62:3500
+24/06/2009,11:34:48 AM,User clicked cancel before a socket was established
+09/07/2009,9:37:10 AM,---------------------------
+09/07/2009,9:37:10 AM,ERI started
+09/07/2009,9:37:10 AM,Requesting socket for 192.168.0.62:3500
+09/07/2009,9:37:11 AM,Socket established
+09/07/2009,9:37:51 AM,---------------------------
+09/07/2009,9:37:51 AM,ERI started
+09/07/2009,9:37:51 AM,Requesting socket for 192.168.0.62:3500
+09/07/2009,9:37:51 AM,Socket established
+09/07/2009,9:38:18 AM,---------------------------
+09/07/2009,9:38:18 AM,ERI started
+09/07/2009,9:38:18 AM,Requesting socket for 192.168.0.62:3500
+09/07/2009,9:38:18 AM,Socket established
+09/07/2009,11:00:00 AM,---------------------------
+09/07/2009,11:00:00 AM,ERI started
+09/07/2009,11:00:00 AM,Requesting socket for 192.168.0.62:3500
+09/07/2009,11:00:00 AM,Socket established
+09/07/2009,11:00:05 AM,Disconnect button clicked

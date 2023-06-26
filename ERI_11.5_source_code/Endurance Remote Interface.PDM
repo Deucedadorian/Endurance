@@ -1,0 +1,353 @@
+[Root]
+Most Recent Package=Standard Setup Package 1
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+
+[Package|Dep File 1|Files Released]
+
+[Package|Dep File 1|Missing Dependency Information]
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+
+[Package|Dep File 1|Files Added]
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\udpdownload.exe=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\event codes.txt=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\endurance remote interface.exe.local=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=
+
+[Package|Dep File 1|Files Removed]
+
+[Package|Dep File 1|Files In Project]
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=Yes
+C:\Program Files\Endurance Remote Interface\LED.ocx=Yes
+C:\Windows\System32\MSSTKPRP.DLL=Yes
+C:\Program Files\Endurance Remote Interface\SaxComm8.ocx=Yes
+C:\Program Files\Endurance Remote Interface\MSFLXGRD.OCX=Yes
+C:\Program Files\Endurance Remote Interface\freeSize.ocx=Yes
+C:\Program Files\Endurance Remote Interface\COMDLG32.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSCOMCTL.OCX=Yes
+C:\Program Files\Endurance Remote Interface\RICHTX32.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSCOMCT2.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSCAL.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSWINSCK.OCX=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=No
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Dep File 1|Install Locations]
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\EnduranceRemoteInterface\LED.ocx=$(AppPath)
+C:\Windows\System32\SaxComm8.ocx=$(AppPath)
+C:\Windows\System32\MSFLXGRD.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\freeSize.ocx=$(AppPath)
+C:\Windows\System32\COMDLG32.OCX=$(AppPath)
+C:\Windows\System32\MSCOMCTL.OCX=$(AppPath)
+C:\Windows\System32\RICHTX32.OCX=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSCOMCT2.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSCAL.OCX=$(AppPath)
+C:\Windows\System32\MSWINSCK.OCX=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=$(AppPath)
+C:\Program Files\Endurance Remote Interface\LED.ocx=$(AppPath)
+C:\Windows\System32\MSSTKPRP.DLL=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\SaxComm8.ocx=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\MSFLXGRD.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\freeSize.ocx=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\COMDLG32.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\MSCOMCTL.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\RICHTX32.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\MSCOMCT2.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\MSCAL.OCX=$(WinSysPath)
+C:\Program Files\Endurance Remote Interface\MSWINSCK.OCX=$(WinSysPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=$(AppPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=No
+C:\Program Files\EnduranceRemoteInterface\LED.ocx=No
+C:\Windows\System32\SaxComm8.ocx=No
+C:\Windows\System32\MSFLXGRD.OCX=No
+C:\Program Files\EnduranceRemoteInterface\freeSize.ocx=No
+C:\Windows\System32\COMDLG32.OCX=No
+C:\Windows\System32\MSCOMCTL.OCX=No
+C:\Windows\System32\RICHTX32.OCX=No
+C:\Windows\System32\MSCOMCT2.OCX=No
+C:\Program Files\EnduranceRemoteInterface\MSCAL.OCX=No
+C:\Windows\System32\MSWINSCK.OCX=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=No
+
+[Package|Dep File 1|Distribution]
+Type=single
+Size=
+Title=Endurance Remote Interface
+
+[Package|Dep File 1|IconGroups]
+Group0=Endurance Remote Interface
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Dep File 1|Endurance Remote Interface]
+Icon1="Endurance Remote Interface.exe"
+Title1=Version 11.5
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Dep File 1|DepFile]
+DepCabFile=Endurance Remote Interface.CAB
+DepCabRun=Endurance Remote Interface.INI
+
+[Package|Dep File 1|Package]
+PackageFolder=C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5
+ProjectFolder=C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5
+ServerSideCab=
+File1=C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Users\Public\installations\install Endurance Remote Interface\Version 11.5
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+
+[Package|Standard Setup Package 1|Files Added]
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\udpdownload.exe=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\event codes.txt=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\endurance remote interface.exe.local=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\chord.wav=
+c:\users\public\visual basic 6 source code\endurance remote interface\version 11.5\windows xp hardware fail.wav=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\COMDLG32.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\LED.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCAL.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCT2.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCTL.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSFLXGRD.DEP=
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\RICHTX32.DEP=
+
+[Package|Standard Setup Package 1|Files Removed]
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=Yes
+C:\Program Files\EnduranceRemoteInterface\LED.ocx=Yes
+C:\Program Files\EnduranceRemoteInterface\MSSTKPRP.DLL=Yes
+C:\Program Files\EnduranceRemoteInterface\SaxComm8.ocx=Yes
+C:\Program Files\EnduranceRemoteInterface\MSFLXGRD.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\freeSize.ocx=Yes
+C:\Program Files\EnduranceRemoteInterface\COMDLG32.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\MSCOMCTL.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\RICHTX32.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\MSCOMCT2.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\MSCAL.OCX=Yes
+C:\Program Files\EnduranceRemoteInterface\MSWINSCK.OCX=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\COMDLG32.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\LED.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCAL.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCT2.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCTL.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSFLXGRD.DEP=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\RICHTX32.DEP=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Program Files\EnduranceRemoteInterface\LED.ocx=$(AppPath)
+C:\Windows\System32\SaxComm8.ocx=$(AppPath)
+C:\Windows\System32\MSFLXGRD.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\freeSize.ocx=$(AppPath)
+C:\Windows\System32\COMDLG32.OCX=$(AppPath)
+C:\Windows\System32\MSCOMCTL.OCX=$(AppPath)
+C:\Windows\System32\RICHTX32.OCX=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\RICHED32.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\MSCOMCT2.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSCAL.OCX=$(AppPath)
+C:\Windows\System32\MSWINSCK.OCX=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=$(AppPath)
+C:\Program Files\Endurance Remote Interface\LED.ocx=$(AppPath)
+C:\Windows\System32\MSSTKPRP.DLL=$(AppPath)
+C:\Program Files\Endurance Remote Interface\SaxComm8.ocx=$(AppPath)
+C:\Program Files\Endurance Remote Interface\MSFLXGRD.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\freeSize.ocx=$(AppPath)
+C:\Program Files\Endurance Remote Interface\COMDLG32.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\MSCOMCTL.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\RICHTX32.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\MSCOMCT2.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\MSCAL.OCX=$(AppPath)
+C:\Program Files\Endurance Remote Interface\MSWINSCK.OCX=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSSTKPRP.DLL=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\SaxComm8.ocx=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSFLXGRD.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\COMDLG32.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSCOMCTL.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\RICHTX32.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSCOMCT2.OCX=$(AppPath)
+C:\Program Files\EnduranceRemoteInterface\MSWINSCK.OCX=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\COMDLG32.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\LED.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCAL.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCT2.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCTL.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSFLXGRD.DEP=$(AppPath)
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\RICHTX32.DEP=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe=No
+C:\Program Files\EnduranceRemoteInterface\LED.ocx=No
+C:\Windows\System32\SaxComm8.ocx=No
+C:\Windows\System32\MSFLXGRD.OCX=No
+C:\Program Files\EnduranceRemoteInterface\freeSize.ocx=No
+C:\Windows\System32\COMDLG32.OCX=No
+C:\Windows\System32\MSCOMCTL.OCX=No
+C:\Windows\System32\RICHTX32.OCX=No
+C:\Windows\System32\MSCOMCT2.OCX=No
+C:\Program Files\EnduranceRemoteInterface\MSCAL.OCX=No
+C:\Windows\System32\MSWINSCK.OCX=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\UDPDownload.exe=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Event codes.txt=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Endurance Remote Interface.exe.local=No
+C:\Program Files\Endurance Remote Interface\LED.ocx=No
+C:\Windows\System32\MSSTKPRP.DLL=Yes
+C:\Program Files\Endurance Remote Interface\SaxComm8.ocx=Yes
+C:\Program Files\Endurance Remote Interface\MSFLXGRD.OCX=Yes
+C:\Program Files\Endurance Remote Interface\freeSize.ocx=Yes
+C:\Program Files\Endurance Remote Interface\COMDLG32.OCX=No
+C:\Program Files\Endurance Remote Interface\MSCOMCTL.OCX=Yes
+C:\Program Files\Endurance Remote Interface\RICHTX32.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSCOMCT2.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSCAL.OCX=Yes
+C:\Program Files\Endurance Remote Interface\MSWINSCK.OCX=Yes
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\chord.wav=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\Windows XP Hardware Fail.wav=No
+C:\Program Files\EnduranceRemoteInterface\MSSTKPRP.DLL=No
+C:\Program Files\EnduranceRemoteInterface\SaxComm8.ocx=No
+C:\Program Files\EnduranceRemoteInterface\MSFLXGRD.OCX=No
+C:\Program Files\EnduranceRemoteInterface\COMDLG32.OCX=No
+C:\Program Files\EnduranceRemoteInterface\MSCOMCTL.OCX=No
+C:\Program Files\EnduranceRemoteInterface\RICHTX32.OCX=No
+C:\Program Files\EnduranceRemoteInterface\MSCOMCT2.OCX=No
+C:\Program Files\EnduranceRemoteInterface\MSWINSCK.OCX=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\COMDLG32.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\LED.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCAL.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCT2.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSCOMCTL.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\MSFLXGRD.DEP=No
+C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5\RICHTX32.DEP=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=Endurance Remote Interface
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=C:\Users\Public\installations\install Endurance Remote Interface\Version 11.5
+ProjectFolder=C:\Users\Public\Visual Basic 6 source code\Endurance Remote Interface\Version 11.5
+ServerSideCab=
+File1=C:\Users\Public\installations\install Endurance Remote Interface\Version 11.5\setup.exe
+File2=C:\Users\Public\installations\install Endurance Remote Interface\Version 11.5\Setup.Lst
+File3=C:\Users\Public\installations\install Endurance Remote Interface\Version 11.5\Endurance Remote Interface.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=Endurance Remote Interface
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|Endurance Remote Interface]
+Icon1="Endurance Remote Interface.exe"
+Title1=Version 11.5
+StartIn1=$(AppPath)
+Key1=Icon1

@@ -1,0 +1,30 @@
+[Version]
+Version=11.5.0.0
+
+[Endurance Remote Interface.exe <0009>]
+Dest=$(AppPath)
+Date=09/07/2009
+Time=14:14
+Version=11.5.0.0
+CABFilename=Endurance Remote Interface.CAB
+Uses1=msvbvm60.dll
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=LED.ocx
+Uses8=SaxComm8.ocx
+Uses9=MSFLXGRD.OCX
+Uses10=freeSize.ocx
+Uses11=COMDLG32.OCX
+Uses12=MSCOMCTL.OCX
+Uses13=RICHTX32.OCX
+Uses14=MSCOMCT2.OCX
+Uses15=MSCAL.OCX
+Uses16=MSWINSCK.OCX
+Uses17=UDPDownload.exe
+Uses18=Event codes.txt
+Uses19=Endurance Remote Interface.exe.local
+Uses20=chord.wav
+Uses21=Windows XP Hardware Fail.wav

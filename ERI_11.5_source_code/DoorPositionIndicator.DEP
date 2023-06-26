@@ -1,0 +1,17 @@
+[Version]
+Version=1.0.0.0
+
+[DoorPositionIndicator.ocx <0009>]
+Dest=$(AppPath)
+Date=23/07/2004
+Time=09:52
+Version=1.0.0.0
+CABFilename=DoorPositionIndicator.CAB
+CABINFFile=DoorPositionIndicator.INF
+Uses1=MSVBVM60.DLL
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=MSSTKPRP.DLL

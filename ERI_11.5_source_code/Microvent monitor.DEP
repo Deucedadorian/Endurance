@@ -1,0 +1,35 @@
+[Version]
+Version=14.0.0.0
+
+[Microvent monitor.exe <0009>]
+Dest=$(AppPath)
+Date=4/28/2005
+Time=12:53
+Version=14.0.0.0
+CABFilename=Microvent monitor.CAB
+CABINFFile=Microvent monitor.INF
+Uses1=msvbvm60.dll
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=MSFLXGRD.OCX
+Uses8=dao360.dll
+Uses9=MSCOMCTL.OCX
+Uses10=COMDLG32.OCX
+Uses11=MSCAL.OCX
+Uses12=MSCOMCT2.OCX
+Uses13=RICHTX32.OCX
+Uses14=DBGRID32.OCX
+Uses15=MicroVentText.ocx
+Uses16=FLIP display.ocx
+Uses17=DoorPositionIndicator.ocx
+Uses18=freeSize.ocx
+Uses19=LED.ocx
+Uses20=MVconnector.ocx
+Uses21=PushButton.ocx
+Uses22=SelectButton.ocx
+Uses23=TimeClockControl.ocx
+Uses24=DECODE.TXT
+Uses25=Microvent monitor.exe.local

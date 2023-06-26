@@ -1,0 +1,20 @@
+[Version]
+Version=1.0.0.0
+
+[MVconnector.ocx <0009>]
+Dest=$(AppPath)
+Date=18/08/2003
+Time=15:38
+Version=1.0.0.0
+CABFilename=MVconnector.CAB
+CABINFFile=MVconnector.INF
+Uses1=MSVBVM60.DLL
+Uses2=OLEAUT32.DLL
+Uses3=OLEPRO32.DLL
+Uses4=ASYCFILT.DLL
+Uses5=STDOLE2.TLB
+Uses6=COMCAT.DLL
+Uses7=SaxComm8.ocx
+Uses8=DAO360.DLL
+Uses9=MSFLXGRD.OCX
+Uses10=SearchList.ocx
