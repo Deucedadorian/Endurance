@@ -919,7 +919,7 @@ const static float gkfRPMLSSMax = 400.0;  // 400 RPMLSS upper limit
 #define OS_SEM_ACCEPT_EN      1 /* enable semaphore accept handling          */
 #define STACK_CNT_512         3 /* stat task + prog stack +flash write       */  // 20050427 ACH add 1
 #define STACK_CNT_2K          1 /* application tasks */
-#define STACK_CNT_1K				9/* 2K stack for tcp/ip socket                */
+#define STACK_CNT_1K		  9 /* 2K stack for tcp/ip socket                */
 #define OS_TICKS_PER_SEC     64 /* default is 64 ticks per second // 20050422 ACH           */
 
 // the following constants are based upon the uC-OSII tick frequency ...
@@ -963,47 +963,47 @@ const int OS_TICKS_PER_HALF_SEC  = OS_TICKS_PER_SEC / 2;   //=32 ticks
 // Command bit structure to Tower Controller ...
 // Used as bit masks for guiTowerCommand
 enum{
-CMD_NULL					=  0,
-CMD_RUN            	=  1,
-CMD_HALT           	=  2,
-CMD_CLEARSVC       	=  3,
-CMD_CLEARMAX       	=  4,
-CMD_CLEAREVNT      	=  5,
-CMD_TESTON				=  6,
-CMD_TESTOFF				=  7,
-CMD_SetDate				=  8,
-CMD_SetTime				=	9,
+CMD_NULL			=   0,
+CMD_RUN            	=   1,
+CMD_HALT           	=   2,
+CMD_CLEARSVC       	=   3,
+CMD_CLEARMAX       	=   4,
+CMD_CLEAREVNT      	=   5,
+CMD_TESTON			=   6,
+CMD_TESTOFF			=   7,
+CMD_SetDate			=   8,
+CMD_SetTime			=   9,
 
 
 CMD_ReqIPinfo     	= 51,
-CMD_ReqDigIO		  	= 52,
+CMD_ReqDigIO		= 52,
 CMD_CancelDigIO	  	= 53,
 CMD_RequestPassKey	= 54,
 
-CMD_SetIPAdd		  	= 61,
-CMD_SetNetmask	  		= 62,
+CMD_SetIPAdd		= 61,
+CMD_SetNetmask	  	= 62,
 CMD_SetNameServer 	= 63,
-CMD_SetGateway	  		= 64,
-CMD_SetIPPort 	  		= 65,
+CMD_SetGateway	  	= 64,
+CMD_SetIPPort 	  	= 65,
 CMD_ApplyIPSettings	= 66,
-CMD_Motor				= 67,
-CMD_ApplyBrake			= 68,
+CMD_Motor			= 67,
+CMD_ApplyBrake		= 68,
 CMD_StackReport		= 69,
 CMD_RequestSiteInfo	= 71,
 CMD_SetSiteInfo		= 72,
-CMD_RequestFlashInfo	= 73,
-CMD_QueryTestMode		= 74,
-CMD_RequestRecInfo   = 75,
-CMD_RequestMainRec   = 76,
-CMD_CancelRecords		= 77,
-CMD_Hello				= 78,
-CMD_SetRecInterval   = 79,
+CMD_RequestFlashInfo= 73,
+CMD_QueryTestMode	= 74,
+CMD_RequestRecInfo  = 75,
+CMD_RequestMainRec  = 76,
+CMD_CancelRecords	= 77,
+CMD_Hello		    = 78,
+CMD_SetRecInterval  = 79,
 CMD_RequestDate		= 81,
 CMD_RequestTime		= 82,
-CMD_RequestTriggers  = 83,
+CMD_RequestTriggers = 83,
 CMD_SetTriggers		= 84,
-CMD_ReqRecInterval   = 85,
-CMD_Password		   = 86,
+CMD_ReqRecInterval  = 85,
+CMD_Password		= 86,
 CMD_NewPassword		= 87,
 CMD_SetNewPassword	= 88,
 CMD_FwUpgrade		= 89,
@@ -1026,12 +1026,12 @@ EV_HaltState		=	5,
 EV_CalmState		=	6,
 EV_CutinState	  	=	7,
 EV_FreeWheelState	=	8,
-EV_MotorState     =	9,
-EV_GenLowState    = 	10,
-EV_GenHighState   =	11,
-EV_HighWindState  =	12,
-EV_FaultState     =	13,  //13,14,15
-EV_WarningState   =	16,  //16,17,18,19
+EV_MotorState       =	9,
+EV_GenLowState      = 	10,
+EV_GenHighState     =	11,
+EV_HighWindState    =	12,
+EV_FaultState       =	13,  //13,14,15
+EV_WarningState     =	16,  //16,17,18,19
 
 EV_Trigger		   =  25, //Diagnostic trigger occured
 EV_TriggerERI	   =	26, //Diagnostic trigger (via ERI)
@@ -1049,9 +1049,9 @@ EV_StateWithPath	= 	20,
 
 EV_Halt				=	120, //
 EV_Run				=	121, //
-EV_ClrService  	=  122, //
-EV_ClrMax 		   =	123, //
-EV_ClrEvents    	=  124, //
+EV_ClrService  	    =   122, //
+EV_ClrMax 		    =	123, //
+EV_ClrEvents    	=   124, //
 EV_OldTime       	=	125, //
 EV_NewTime       	=	126, //
 EV_OldDate       	=	127, //
@@ -1109,7 +1109,7 @@ EV_TestModes		=	130  // 130 to 134 for test modes Normal run to Anemom test
 
 
 #memmap xmem        //Place c functions in extended memory unless declared as
-						  //root
+				    //root
 
 #use ucos2.lib
 //#use "fs2.lib"
