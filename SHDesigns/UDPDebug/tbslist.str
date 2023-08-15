@@ -1,0 +1,98 @@
+typedef struct 
+{
+	int	prein,
+			preout,
+			menuin,
+			audio,
+			menuout,
+			payin,
+			payout,
+			pickupin,
+			pickupout;
+} RECORD;
+
+typedef enum  { DISPLAY_NONE,
+DISPLAY_CARS,
+DISPLAY_TOTAL,
+DISPLAY_TOTALDPAVERAGE,
+DISPLAY_TOTALDAVERAGE,
+DISPLAY_TOTALGOAL,
+DISPLAY_PICKUP,
+DISPLAY_PICKUPDPAVERAGE,
+DISPLAY_PICKUPDAVERAGE,
+DISPLAY_PICKUPGOAL,
+DISPLAY_PAY,
+DISPLAY_PAYDPAVERAGE,
+DISPLAY_PAYDAVERAGE,
+DISPLAY_PAYGOAL,
+DISPLAY_MENU,
+DISPLAY_MENUDPAVERAGE,
+DISPLAY_MENUDAVERAGE,
+DISPLAY_MENUGOAL,
+DISPLAY_AUDIO
+} DISPLAY_TYPE;
+
+typedef enum {
+	DTYPE_MENU,DTYPE_AUDIO,DTYPE_PAY,DTYPE_PICKUP,DTYPE_TOTAL} DTYPE;
+
+typedef struct {
+	enum8  model DISPLAY_TYPE,moder DISPLAY_TYPE;
+	char colorl,colorr;
+} DISP ;
+
+struct DISPLAY {
+	DISP passive,active;
+	unsigned timer;	// set non-0 when PC app outputs static text
+	char defined;		// 0= undefined, 1= defined, 2=defined with message display
+};
+
+struct DISPLAY_MSG{
+	char message[24];
+	int display_time;
+};
+
+#define uint unsigned int
+
+typedef struct {
+	unsigned time;
+	unsigned count;
+	unsigned goal_cnt;
+	unsigned goal[3];
+	char num_goals;
+	char goal_colors[4];
+} TIME_GOAL;
+
+typedef struct {
+	TIME_GOAL pickup;
+	TIME_GOAL pay;
+	TIME_GOAL menu;
+	TIME_GOAL total;
+	int audio_goal;
+	int audio_color;
+	int day_part;	// start time in secs since 12:00
+} DAY_PART;
+
+typedef struct
+{
+	unsigned long ip_address HEX; 
+	unsigned long netmask HEX;
+	unsigned long gateway HEX;
+	char long_flag;
+	char time_flag;
+	char pre_ena,pay_ena;
+	int display_baud;
+	int watchdog;
+	unsigned long valid_flag;
+} RTDATA;
+
+typedef struct 
+{
+	unsigned counter;
+	unsigned char val;// val is upper 8 bits
+} INPUT_DATA;
+
+struct xxx {
+	float f1,f2;
+	int data[4];
+	int xxxx;
+	};

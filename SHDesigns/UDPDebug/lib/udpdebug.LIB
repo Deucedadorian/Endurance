@@ -1,0 +1,490 @@
+/*** BeginHeader  ********************************************/
+#ifndef __UDPDEBUG_LIB
+#define __UDPDEBUG_LIB
+/*** EndHeader ***********************************************/
+/* START LIBRARY DESCRIPTION *********************************************
+UDPDEBUG.LIB
+	Copyright (c) 2002-2003, SHDesigns, www.shdesigns.org
+
+DESCRIPTION:
+	UDP Debug console.
+
+SUPPORT LIB'S:
+END DESCRIPTION **********************************************************/
+
+/* START FUNCTION DESCRIPTION ********************************************
+UDPDbgInit                       <SSCANF.LIB>
+
+SYNTAX: int dbg_init(int ena);
+
+PARAMETER1: 1 to enable, 0 to disable.
+
+KEYWORDS: debug
+
+DESCRIPTION: Initialize UDP debug console
+Note: It is best to call dbg_init(0) at the beginning of main(). Otherwise any printf's to
+the debugger before sock_init() may cause problems. After sock_init, call dng_init(1).
+
+RETURN VALUE:	integer, non-0 if error.
+END DESCRIPTION **********************************************************/
+
+/*** BeginHeader  dbg_init */
+int dbg_init(int ena);
+
+#ifndef DEBUG_UDP_PORT
+#define DEBUG_UDP_PORT	2200
+#endif
+
+#define DEBUG_PING -1
+#define DEBUG_ENABLE 0
+#define DEBUG_READ 1
+#define DEBUG_WRITE 2
+#define DEBUG_TEXT 3
+#define DEBUG_RFLOAT 4
+#define DEBUG_EREAD 5
+#define DEBUG_EWRITE 6
+#define DEBUG_IREAD 7
+#define DEBUG_IWRITE 8
+#define DEBUG_RESET 9
+
+long _debug_ip;
+char _debug_sock_open;
+udp_Socket _udp_dbg_sock;
+unsigned int _debug_port;
+/*** EndHeader */
+
+
+int dbg_init(int ena)
+{
+#GLOBAL_INIT{ _dbg_read=_dbg_write=_dbg_input; _debug_sock_open=0;}
+	if (!ena)
+	{
+		if (_debug_sock_open)
+			sock_close(&_udp_dbg_sock);
+		_debug_sock_open=0;
+		_debug_ip=0l;
+		return 0;
+	}
+	if(!udp_extopen(&_udp_dbg_sock, IF_ANY, DEBUG_UDP_PORT, -1L, -1, NULL, 0, 0))
+	{
+#if DEBUG_RST
+		printf("udp_open failed!\r\n");
+#endif
+		return -1;
+	}
+	_debug_sock_open=1;
+	return 0;
+}
+
+
+/*** BeginHeader  dbg_printf */
+
+int dbg_printf(char *fmt,...);
+
+typedef struct {
+	char cmd;
+	int	parami;
+	long	paraml;
+	char data[258];
+	} DBG_CMD;
+
+/*** EndHeader */
+
+/* START FUNCTION DESCRIPTION ********************************************
+dbg_printf                       <UDPDEBUG.LIB>
+
+SYNTAX: int dbg_printf(char * fmt,...);
+
+PARAMETER1: Format string
+
+PARAMETER2..n: values to format/print
+
+KEYWORDS: convert
+
+DESCRIPTION: ANSI String formatting routine similar to printf except
+output goes to a remote console via UDP.
+
+RETURN VALUE:	The number of characters sent.
+
+END DESCRIPTION **********************************************************/
+
+void _dbg_qe(int c, char *buf, int *cnt,  void *instanceParam)
+{
+	if (*cnt>=255)
+		return;
+	buf[(*cnt)++] = c;
+}
+#ifdef putchar
+#define _xputchar putchar
+#undef putchar
+#endif
+
+int dbg_printf(char *format, ...)
+{
+	char * s;
+	DBG_CMD * cmd;
+	int retry;
+	char buffer[280];
+	retry=5;
+//	if (!_debug_sock_open)
+//		return 0;
+	cmd=(DBG_CMD *)buffer;
+	cmd->parami = 0;
+	s=cmd->data;
+	cmd->cmd=DEBUG_TEXT;
+	doprnt(_dbg_qe, format, (char *) ((char *) &format + sizeof (format)), NULL, s, &cmd->parami);
+	s[cmd->parami++]='\0';
+
+	if ((_debug_ip!=0)&&(_debug_port!=0))
+	{
+#ifdef DBG_AUTO_CR
+		s=cmd->data;
+		while (*s!='\0')
+			if (*s=='\n')
+			{
+				memcpy(s+1,s,sizeof(buffer)-1-(s-buffer));
+				*s++='\r';
+				s++;
+				cmd->parami++;
+			}
+			else
+				s++;
+#endif
+		while (udp_sendto(&_udp_dbg_sock,buffer,sizeof(DBG_CMD)-256+cmd->parami,_debug_ip,_debug_port)<0&&--retry)
+			tcp_tick(NULL); // send it
+	}
+	else
+	while (*s) {
+		putchar(*s++);
+	}
+	return cmd->parami;
+}
+#ifdef _xputchar
+#define putchar _xputchar
+#undef _xputcghar
+#endif
+
+
+/* START FUNCTION DESCRIPTION ********************************************
+dbg_getchar                       <UDPDEBUG.LIB>
+
+SYNTAX: int dbg_getchar()
+
+PARAMETERS: none
+
+KEYWORDS: debug
+
+DESCRIPTION: Get next char from input
+	Will use the DC Stdio window if noe UDP console is connected
+
+RETURN VALUE: charcter pressed
+
+END DESCRIPTION **********************************************************/
+
+
+/* START FUNCTION DESCRIPTION ********************************************
+dbg_kbhit                       <UDPDEBUG.LIB>
+
+SYNTAX: int dbg_kbhit()
+
+PARAMETERS: none
+
+KEYWORDS: debug
+
+DESCRIPTION: Test if character pressed.
+	Will use the DC Stdio window if noe UDP console is connected
+
+RETURN VALUE: Returns 1 if character in input buffer, 0 if empty
+
+END DESCRIPTION **********************************************************/
+
+/*** BeginHeader dbg_kbhit */
+int dbg_kbhit();
+char _dbg_input[32];
+char * _dbg_read;
+char * _dbg_write;
+/*** EndHeader */
+
+
+int dbg_kbhit()
+{
+	if (_debug_ip==0)
+#ifdef kbhit
+#define _xkbhit kbhit
+#undef kbhit
+#endif
+		return kbhit();
+#ifdef _xkbhit
+#define kbhit _xkbhit
+#undef _x_kbhit
+#endif
+
+	if (_dbg_read!=_dbg_write)
+		return 1;
+	return 0;
+}
+
+/*** BeginHeader  dbg_getchar */
+
+int dbg_getchar();
+
+/*** EndHeader */
+
+#ifdef getchar
+#define _xgetchar getchar
+#undef getchar
+#endif
+
+int dbg_getchar()
+{
+	int c;
+	if (_debug_ip==0)
+		return getchar();
+	while (dbg_kbhit()==0)
+		debug_tick();
+	c=*_dbg_read++;
+	c&=0xff;
+	if (_dbg_read>=_dbg_input+32)
+		_dbg_read=_dbg_input;
+	return c;
+}
+
+#ifdef _xgetchar
+#define getchar _xgetchar
+#endif
+
+/*** BeginHeader  _dbg_rx */
+int _dbg_rx(int c);
+/*** EndHeader */
+
+nodebug int _dbg_rx(int c)
+{
+	char * s;
+	s=_dbg_write;
+	if (++s==_dbg_input+32)
+		s=_dbg_input;
+	if (s==_dbg_read) // buffer full
+	{
+		dbg_printf("STDIO Input Buffer Overflow!\r\n");
+		return 1;
+	}
+	*_dbg_write=c;
+	_dbg_write=s;
+	return 0;
+}
+
+/* START FUNCTION DESCRIPTION ********************************************
+debug_tick                       <UDPDEBUG.LIB>
+
+SYNTAX: int debug_tick();
+
+PARAMETERS: none
+
+KEYWORDS: debug
+
+DESCRIPTION: Process debug requests
+
+RETURN VALUE:	0 if no packet, 1 if packet processed, -1 if error in data
+
+END DESCRIPTION **********************************************************/
+
+/*** BeginHeader  debug_tick */
+int debug_tick();
+/*** EndHeader */
+nodebug unsigned CRC16(unsigned char * pcdataptr,unsigned uslength,unsigned uscrc)
+{
+	unsigned usdata;
+	if (uslength==0) return(0);
+	while(uslength--)
+	{
+		usdata=(*(pcdataptr++))<<8;
+		uscrc=((uscrc&0xff)<<8)+(uscrc>>8);
+		uscrc=uscrc^usdata;
+		usdata=uscrc& 0xff00;
+		usdata<<=4;
+		uscrc=uscrc^usdata;
+		usdata = uscrc & 0xff00;
+		usdata >>= 5;
+		uscrc = uscrc ^ usdata;
+		usdata >>= 7;
+//		uscrc = uscrc ^ usdata;	// this is missing
+	}
+	uscrc = ~(((uscrc & 0x00ff) <<8)+ (uscrc >> 8 ));
+	return(uscrc);
+}
+
+int debug_tick()
+{
+	static char buf[280];
+	char * s;
+	longword ip;
+	word port;
+	int len,tmpvar,retval;
+	unsigned short * crc;
+//	float f;
+	DBG_CMD * cmd;
+	cmd=(DBG_CMD *)buf;
+
+	/* receive the packet */
+	tcp_tick(&_udp_dbg_sock);
+	len= udp_recvfrom(&_udp_dbg_sock, buf, sizeof(buf),&ip,&port);
+	if (-1 ==len)
+	{
+		/* no packet read. return */
+		return 0;
+	}
+	// check crc
+	crc=(unsigned short *)(buf+len-2);
+	tmpvar=CRC16(buf,len-2,0xffff);
+	if ((unsigned)tmpvar!=*crc)
+	{
+		dbg_printf("CRC error\n");
+		return -1;
+	}
+	retval=1;	// default to ok
+	switch (cmd->cmd)
+	{
+	case	DEBUG_PING:	// search
+			cmd->parami=0;
+			cmd->paraml=0;
+			crc=(unsigned *)cmd->data;
+			*crc=getcrc(buf+2,sizeof(DBG_CMD)-258,0xffff);
+			udp_sendto(&_udp_dbg_sock,buf,sizeof(DBG_CMD)-256,ip,port);
+			break;
+	case	DEBUG_ENABLE: // enable/disable
+			if (cmd->parami==0)
+			{
+				_debug_ip=0l;
+				dbg_printf("Connection Closed\n");
+			}
+			else
+			{
+				if ((cmd->parami==1)||(_debug_ip!=ip)||(_debug_port!=port))
+				{
+					_debug_ip=ip;
+					_debug_port=port;
+					dbg_printf("STDIO Connect from %d.%d.%d.%d port %d.\n",0xff&(int)(ip>>24),0xff&(int)(ip>>16),
+						0xff&(int)(ip>>8),(int)(ip&0xff),port);
+				}
+			}
+			break;
+	case	DEBUG_READ:	// read mem
+			if (cmd->parami>256)
+				cmd->parami=256;  // maximum length
+			len=cmd->parami;
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			xmem2root(cmd->data,cmd->paraml,(len&1)?len+1:len);
+			crc=(unsigned *)&cmd->data[len];
+			*crc=getcrc(buf+2,sizeof(DBG_CMD)-258+len,0xffff);
+			udp_sendto(&_udp_dbg_sock,buf,sizeof(DBG_CMD)-256+len,ip,port);
+			break;
+	case	DEBUG_WRITE:	// write mem
+			len=cmd->parami;
+			if (len>256)
+				len=256;
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			root2xmem(cmd->paraml,cmd->data,len);
+			break;
+	case DEBUG_TEXT:
+			if (cmd->parami>32)
+				cmd->parami=32;
+			if (cmd->parami<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			for (len=0;len<cmd->parami;len++)
+				if (_dbg_rx(cmd->data[len]))
+					break;
+			break;
+	case	DEBUG_EREAD:	// read eiomem
+			if (cmd->parami>256)
+				cmd->parami=256;  // maximum length
+			len=cmd->parami;
+			crc=(unsigned int *)&cmd->data; // use crc for data
+			tmpvar=(int)cmd->paraml;	// paraml is address
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			s=cmd->data; // use crc for data
+			while (len--)
+				WrPortE(tmpvar++,NULL,*s++);
+			crc=(unsigned *)&cmd->data[cmd->parami];
+			*crc=getcrc(buf+2,sizeof(DBG_CMD)-258+len,0xffff);
+			udp_sendto(&_udp_dbg_sock,buf,sizeof(DBG_CMD)-256+cmd->parami,ip,port);
+			break;
+	case	DEBUG_EWRITE:	// write eiomem
+			if (cmd->parami>256)
+				cmd->parami=256;  // maximum length
+			len=cmd->parami;
+			tmpvar=(int)cmd->paraml;	// paraml is address
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			s=cmd->data; // use crc for data
+			while (len--)
+				WrPortE(tmpvar++,NULL,*s++);
+			break;
+	case	DEBUG_IREAD:	// read eiomem
+			if (cmd->parami>256)
+				cmd->parami=256;  // maximum length
+			len=cmd->parami;
+			s=cmd->data; // use crc for data
+			tmpvar=(int)cmd->paraml;	// paraml is address
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			while (len--)
+				*s++=RdPortI(tmpvar++);
+			crc=(unsigned *)&cmd->data[cmd->parami];
+			*crc=getcrc(buf+2,sizeof(DBG_CMD)-258+len,0xffff);
+			udp_sendto(&_udp_dbg_sock,buf,sizeof(DBG_CMD)-256+cmd->parami,ip,port);
+			break;
+	case	DEBUG_IWRITE:	// write eiomem
+			if (cmd->parami>256)
+				cmd->parami=256;  // maximum length
+			len=cmd->parami;
+			crc=(unsigned int *)&cmd->data; // use crc for data
+			tmpvar=(int)cmd->paraml;	// paraml is address
+			if (len<=0)
+			{
+				retval=-1;
+				break;		// invalid length
+			}
+			s=cmd->data; // use crc for data
+			while (len--)
+				WrPortI(tmpvar++,NULL,*s++);
+			break;
+	case	DEBUG_RESET:
+#asm
+		ipset 3
+		ld	a,0x5a
+		ioi ld (WDTCR),a
+		xor a
+		ioi ld (WDTTR),a
+xxx:
+		jr		xxx
+#endasm
+			break;
+	}
+	return retval;
+}
+
+//
+/*** BeginHeader  ********************************************/
+#endif
+/*** EndHeader ***********************************************/

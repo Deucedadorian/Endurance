@@ -1,0 +1,26 @@
+[Watch List]
+Watch Count=3
+Watch0Name=_root_dir
+Watch0Hex=0
+Watch0Signed=1
+Watch0Size=1
+Watch0Struct=_root_dir
+Watch0Type=5
+Watch0IsIo=0
+Watch0IsEio=0
+Watch1Name=_fat_table
+Watch1Hex=0
+Watch1Signed=0
+Watch1Size=250
+Watch1Struct=
+Watch1Type=1
+Watch1IsIo=0
+Watch1IsEio=0
+Watch2Name=_dir_fat
+Watch2Hex=0
+Watch2Signed=0
+Watch2Size=166
+Watch2Struct=
+Watch2Type=1
+Watch2IsIo=0
+Watch2IsEio=0

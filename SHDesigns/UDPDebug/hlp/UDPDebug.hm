@@ -1,0 +1,56 @@
+ 
+// Commands (ID_* and IDM_*) 
+HID_STATUSPANE                          0x10069
+HID_UPDATE                              0x103F8
+HID_RECONNECT                           0x18003
+HID_DUMP                                0x18004
+HID_READSYM                             0x18005
+HID_ADDW                                0x18007
+HID_DELETEW                             0x18008
+HID_SAVEW                               0x18009
+HID_LOADW                               0x1800A
+HID_MODIFY                              0x1800B
+HID_AUTO                                0x1800C
+HID_READLASTSYM                         0x1800D
+HID_LOADSTRUCT                          0x1800E
+HID_LOADLASTSTRUCT                      0x1800F
+HID_NEWWVIEW                            0x18010
+HID_LOGFILE                             0x18013
+HID_EDITDATA                            0x18016
+HID_TIMESTAMP                           0x18017
+HID_SHOWSYM                             0x18018
+HID_READBSYM                            0x1801F
+HID_READLASTBSYM                        0x18020
+HID_AUTOCR                              0x18021
+HID_CLS                                 0x18022
+HIDM_WRAP                               0x18023
+HIDM_PAUSE                              0x18024
+HID_DEF_LIST                            0x18025
+HIDM_DUMP_RAM                           0x18026
+HIDM_RESET                              0x18027
+ 
+// Prompts (IDP_*) 
+HIDP_SOCKETS_INIT_FAILED                0x30068
+ 
+// Resources (IDR_*) 
+HIDR_MAINFRAME                          0x20080
+HIDR_UDPDEBTYPE                         0x20081
+HIDR_WMENU                              0x20086
+HIDR_UNUSED                             0x20089
+HIDR_UDPDEBWTYPE                        0x2008A
+HIDR_UDPDEBTTYPE                        0x20093
+HIDR_WTOOLBAR                           0x20094
+HIDR_STOOLBAR                           0x20096
+ 
+// Dialogs (IDD_*) 
+HIDD_ABOUTBOX                           0x20064
+HIDD_IPADDR                             0x20082
+HIDD_DUMPMEM                            0x20083
+HIDD_WATCH                              0x20084
+HIDD_ADDWATCH                           0x20085
+HIDD_DELETWATCH                         0x20087
+HIDD_EDITINT                            0x20088
+HIDD_EDITVAR                            0x20091
+HIDD_DUMPRAM                            0x20098
+ 
+// Frame Controls (IDW_*) 

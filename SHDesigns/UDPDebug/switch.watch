@@ -1,0 +1,18 @@
+[Watch List]
+Watch Count=2
+Watch0Name=MonitorBits
+Watch0Hex=1
+Watch0Signed=0
+Watch0Size=8
+Watch0Struct=
+Watch0Type=1
+Watch0IsIo=0
+Watch0IsEio=0
+Watch1Name=sw_data
+Watch1Hex=1
+Watch1Signed=0
+Watch1Size=255
+Watch1Struct=
+Watch1Type=1
+Watch1IsIo=0
+Watch1IsEio=0

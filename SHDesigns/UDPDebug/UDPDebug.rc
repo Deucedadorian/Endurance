@@ -1,0 +1,749 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\UDPDebug.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\UDPDebug.ico"
+IDI_STRUCT              ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_NONE                ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_INT                 ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_CHAR                ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_LONG                ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_STRING              ICON    DISCARDABLE     "res\\ico00005.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_WTOOLBAR            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDR_STOOLBAR            BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_WTOOLBAR TOOLBAR DISCARDABLE  24, 15
+BEGIN
+    BUTTON      ID_LOADW
+    BUTTON      ID_SAVEW
+    BUTTON      ID_ADDW
+    BUTTON      ID_DELETEW
+    BUTTON      ID_MODIFY
+    BUTTON      ID_EDITDATA
+    BUTTON      ID_AUTO
+    BUTTON      ID_UPDATE
+    SEPARATOR
+    BUTTON      ID_NEWWVIEW
+    BUTTON      ID_DUMP
+    BUTTON      ID_CONTEXT_HELP
+END
+
+IDR_STOOLBAR TOOLBAR DISCARDABLE  24, 15
+BEGIN
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_RECONNECT
+    BUTTON      ID_TIMESTAMP
+    BUTTON      ID_LOGFILE
+    SEPARATOR
+    BUTTON      ID_NEWWVIEW
+    BUTTON      ID_DUMP
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About UDPDebug...",          ID_APP_ABOUT
+    END
+END
+
+IDR_UDPDEBTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Read Last Symbols",           ID_READLASTSYM
+        MENUITEM "Read Last Bios Symbols",      ID_READLASTBSYM, HELP
+        MENUITEM "Load Last Structures (.h or .c)", ID_LOADLASTSTRUCT
+        MENUITEM SEPARATOR
+        MENUITEM "Read Symbols (.map)",         ID_READSYM
+        MENUITEM "Read Bios Symbols (.map)",    ID_READBSYM, HELP
+        MENUITEM "Load Structures (.h or .c)",  ID_LOADSTRUCT
+        MENUITEM SEPARATOR
+        MENUITEM "Dump Memory To file",         IDM_DUMP_RAM
+        MENUITEM "Reset Board",                 IDM_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "New Watch Window",            ID_NEWWVIEW
+        MENUITEM "New Dump Window",             ID_DUMP
+        MENUITEM "Symbol List",                 ID_SHOWSYM
+        MENUITEM "List Defines/Enums",          ID_DEF_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "STDIO"
+    BEGIN
+        MENUITEM "Reconnect",                   ID_RECONNECT
+        MENUITEM "Capure to log file",          ID_LOGFILE
+        MENUITEM "Show Timestamps",             ID_TIMESTAMP
+        MENUITEM "LF-->CR/LF",                  ID_AUTOCR
+        MENUITEM "Clear Screen",                ID_CLS
+        MENUITEM "Wrap Text",                   IDM_WRAP
+        MENUITEM "Stop STDIO",                  IDM_PAUSE
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile Horizontal",            ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertical",              ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About UDPDebug...",          ID_APP_ABOUT
+    END
+END
+
+IDR_UNUSED MENU DISCARDABLE 
+BEGIN
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+END
+
+IDR_UDPDEBWTYPE MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Read Last Symbols",           ID_READLASTSYM, HELP
+        MENUITEM "Read Last Bios Symbols",      ID_READLASTBSYM, HELP
+        MENUITEM "Load Last Structures (.h or .c)", ID_LOADLASTSTRUCT, HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Read Symbols (.map)",         ID_READSYM, HELP
+        MENUITEM "Read Bios Symbols (.map)",    ID_READBSYM, HELP
+        MENUITEM "Load Structures (.h or .c)",  ID_LOADSTRUCT, HELP
+        MENUITEM SEPARATOR
+        MENUITEM "Dump Memory To file",         IDM_DUMP_RAM
+        MENUITEM "Reset Board",                 IDM_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "New Watch Window",            ID_NEWWVIEW, HELP
+        MENUITEM "New Dump Window",             ID_DUMP, HELP
+        MENUITEM "Symbol List",                 ID_SHOWSYM
+        MENUITEM "List Defines/Enums",          ID_DEF_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "Watch"
+    BEGIN
+        MENUITEM "Add Watch",                   ID_ADDW, HELP
+        MENUITEM "Delete Watch",                ID_DELETEW, HELP
+        MENUITEM "Modify Watch",                ID_MODIFY, HELP
+        MENUITEM "Auto Update",                 ID_AUTO, HELP
+        MENUITEM "Save Watch List",             ID_SAVEW, HELP
+        MENUITEM "Load Watch List",             ID_LOADW, HELP
+        MENUITEM "Edit Data",                   ID_EDITDATA, HELP
+        MENUITEM "Update Data",                 ID_UPDATE, HELP
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile Horizontal",            ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertical",              ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About UDPDebug...",          ID_APP_ABOUT
+    END
+END
+
+IDR_UDPDEBTTYPE MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Read Last Symbols",           ID_READLASTSYM
+        MENUITEM "Read Last Bios Symbols",      ID_READLASTBSYM, HELP
+        MENUITEM "Load Last Structures (.h or .c)", ID_LOADLASTSTRUCT
+        MENUITEM SEPARATOR
+        MENUITEM "Read Symbols (.map)",         ID_READSYM
+        MENUITEM "Read Bios Symbols (.map)",    ID_READBSYM, HELP
+        MENUITEM "Load Structures (.h or .c)",  ID_LOADSTRUCT
+        MENUITEM SEPARATOR
+        MENUITEM "Dump Memory To file",         IDM_DUMP_RAM
+        MENUITEM "Reset Board",                 IDM_RESET
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "New Watch Window",            ID_NEWWVIEW
+        MENUITEM "New Dump Window",             ID_DUMP
+        MENUITEM "Symbol List",                 ID_SHOWSYM
+        MENUITEM "List Defines/Enums",          ID_DEF_LIST
+        MENUITEM SEPARATOR
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile Horizontal",            ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertical",              ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About UDPDebug...",          ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_UPDATE,              VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About UDPDebug"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "UDPDebug Version 1.2E",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    CTEXT           "Copyright (C) 2002-2006, SHDesigns\r\nhttp://shdesigns.org/rabbit",
+                    IDC_STATIC,40,25,119,25
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_IPADDR DIALOG DISCARDABLE  0, 0, 177, 41
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select Rabbit Board"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_IP_ADDR,5,20,105,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,120,20,50,14
+    CTEXT           "Rabbit Board IP address",IDC_STATIC,5,0,110,15,
+                    SS_CENTERIMAGE
+END
+
+IDD_DUMPMEM DIALOG DISCARDABLE  0, 0, 310, 199
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dump Memory"
+FONT 8, "Courier New"
+BEGIN
+    COMBOBOX        IDC_ADDRESS,145,5,90,210,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Byte",IDC_MSIZE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,
+                    5,25,60,10
+    CONTROL         "Word",IDC_WORD,"Button",BS_AUTORADIOBUTTON,65,25,55,10
+    CONTROL         "Long",IDC_LONG,"Button",BS_AUTORADIOBUTTON,140,25,60,10
+    LTEXT           "Memory Data",IDC_MEMDATA,0,40,305,155,SS_SUNKEN | 
+                    WS_BORDER
+    DEFPUSHBUTTON   "Close",IDOK,245,0,50,14
+    PUSHBUTTON      "Update",IDC_READ,245,20,50,15
+    RTEXT           "Physical Address:",IDC_STATIC,5,5,130,15,SS_CENTERIMAGE
+END
+
+IDD_ADDWATCH DIALOG DISCARDABLE  0, 0, 186, 152
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Watch"
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_ADDR,5,25,120,235,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Char",IDC_CHAR,"Button",BS_AUTORADIOBUTTON | WS_GROUP,5,
+                    40,45,15
+    CONTROL         "int",IDC_INT,"Button",BS_AUTORADIOBUTTON,5,55,55,15
+    CONTROL         "long int",IDC_LONGINT,"Button",BS_AUTORADIOBUTTON,5,70,
+                    50,15
+    CONTROL         "float",IDC_FLOAT,"Button",BS_AUTORADIOBUTTON,5,85,45,15
+    CONTROL         "String",IDC_STRING,"Button",BS_AUTORADIOBUTTON,5,100,35,
+                    15
+    CONTROL         "struct",IDC_STRUCT,"Button",BS_AUTORADIOBUTTON,20,125,
+                    40,15
+    EDITTEXT        IDC_SLENGTH,150,40,30,15,ES_AUTOHSCROLL
+    CONTROL         "Memory",IDC_MTYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,65,85,75,10
+    CONTROL         "Internal IO",IDC_MTYPE2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,65,100,55,10
+    CONTROL         "External IO",IDC_MTYPE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,120,100,50,10
+    GROUPBOX        "Memory Type",IDC_STATIC,55,75,125,40
+    RTEXT           "Number of items (array size)",IDC_STATIC,50,40,90,15,
+                    SS_CENTERIMAGE
+    CONTROL         "Show as Hex ",IDC_HEX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,120,60,60,10
+    COMBOBOX        IDC_STRUCTLIST,65,125,110,115,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,130,0,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,15,50,14
+    CTEXT           "Hex Address or Variable Name\r\nHex as 0xnn:nnnn or 0xnnnn",
+                    IDC_STATIC,5,0,115,20
+    GROUPBOX        "Structure",IDC_STATIC,5,115,175,35
+    CONTROL         "Unsigned",IDC_SIGNED,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,55,60,50,10
+END
+
+IDD_EDITINT DIALOG DISCARDABLE  0, 0, 152, 46
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Auto Refresh Time"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_INTVAL,15,25,60,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,95,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,25,50,14
+    CTEXT           "Enter 0 to disable automatic refresh",IDC_PROMPT,5,0,80,
+                    20
+END
+
+IDD_EDITVAR DIALOG DISCARDABLE  0, 0, 222, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Data"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DATA,5,45,210,15,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,170,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,115,5,50,14
+    LTEXT           "",IDC_VNAME,5,10,90,15
+END
+
+IDD_DUMPRAM DIALOG DISCARDABLE  0, 0, 187, 44
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dump Memory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Start Dump",IDOK,130,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,24,50,14
+    EDITTEXT        IDC_MEM_START,76,10,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MEM_SIZE,76,26,40,12,ES_AUTOHSCROLL
+    RTEXT           "Start Address:",IDC_STATIC,10,10,64,10,SS_CENTERIMAGE
+    RTEXT           "Size:",IDC_STATIC,10,28,64,10,SS_CENTERIMAGE
+    LTEXT           "Address and size a re in HEX",IDC_STATIC,12,0,98,10
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,2,0,5
+ PRODUCTVERSION 1,2,0,5
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "SHDesigns http://shdesigns.org/rabbit\0"
+            VALUE "FileDescription", "UDPDebug Remote Rabbit Debugger\0"
+            VALUE "FileVersion", "1, 2, 0, 5\0"
+            VALUE "InternalName", "UDPDebug\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002-2004\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "UDPDebug.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SHDesigns Rabiit Lan Debugger\0"
+            VALUE "ProductVersion", "1, 2, 0, 5\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_IPADDR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    IDD_DUMPMEM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_ADDWATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_EDITINT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_EDITVAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 59
+    END
+
+    IDD_DUMPRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+    ID_STATUSPANE           "No item selected                                                     ."
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Rabbit Debug Console"
+    IDR_UDPDEBTYPE          "\nSTDIO Console\n"
+    IDR_UDPDEBWTYPE         "\nWatch Window\n"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "UDPDebug"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new STDIO console\nNew STDIO Console]"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_RECONNECT            "Re-send the connect message\nResend connect message"
+    ID_DUMP                 "Create a new memory dump window\nNew Dump Memory window"
+    ID_READSYM              "Read symbols from map file."
+    ID_ADDW                 "Add Watch Item\nAdd a New Watch Item"
+    ID_DELETEW              "Delete Watch Item\nDelete Watch Item"
+    ID_SAVEW                "Save Watch List\nSave current watch list"
+    ID_LOADW                "Load Watch List\nLoad watch from file (added to current list)"
+    ID_MODIFY               "Modify Watch Settings\nModify Watch Settings"
+    ID_AUTO                 "Set auto update time.\nAutomatic update time"
+    ID_READLASTSYM          "Load the last symbol file (No file open dialog.)"
+    ID_LOADSTRUCT           "Load Stucture/enum definitions.\nLoad Stucture/enum definitions."
+    ID_LOADLASTSTRUCT       "Reload last structure file. (No file open dialog)"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_UPDATE               "Update Display\nUpdate watch data"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEWWVIEW             "Create a new watch Window\nNew Watch Window"
+    ID_LOGFILE              "Save all STDIO output to a file.\nEnable STDIO log to file"
+    ID_EDITDATA             "Edit the currently selected data.\nEdit the currently selected data."
+    ID_TIMESTAMP            "Show time of received text.\nShow time in received text"
+    ID_SHOWSYM              "Display Symbol List\nDisplay Symbols"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_AUTOCR               "Translate Line Feed to CR/LF\nTranslate Line Feed to CR/LF"
+    IDM_WRAP                "Wrap text"
+    IDM_PAUSE               "Ignore incoming STDIO data\nIgnore incoming STDIO data\n"
+    ID_DEF_LIST             "List Defines from structure include files."
+    IDM_RESET               "Reset The board.\nReset The board."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDR_UDPDEBTTYPE         "Text Window\nText Window"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\UDPDebug.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

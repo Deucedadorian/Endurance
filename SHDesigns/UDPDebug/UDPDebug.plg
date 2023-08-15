@@ -1,0 +1,312 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: UDPDebug - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP59.bat" with contents
+[
+@echo off
+copy "hlp\UDPDebug.cnt" .\Release
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP59.bat"
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5A.bat" with contents
+[
+@echo off
+echo. >"hlp\UDPDebug.hm"
+echo // Commands (ID_* and IDM_*) >>"hlp\UDPDebug.hm"
+makehm ID_,HID_,0x10000 IDM_,HIDM_,0x10000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Prompts (IDP_*) >>"hlp\UDPDebug.hm"
+makehm IDP_,HIDP_,0x30000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Resources (IDR_*) >>"hlp\UDPDebug.hm"
+makehm IDR_,HIDR_,0x20000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Dialogs (IDD_*) >>"hlp\UDPDebug.hm"
+makehm IDD_,HIDD_,0x20000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Frame Controls (IDW_*) >>"hlp\UDPDebug.hm"
+makehm IDW_,HIDW_,0x50000 resource.h >>"hlp\UDPDebug.hm"
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5A.bat"
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5B.bat" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\UDPDebug.hpj"
+if errorlevel 1 goto :Error
+if not exist "hlp\UDPDebug.hlp" goto :Error
+copy "hlp\UDPDebug.hlp" .\Release
+goto :done
+:Error
+echo hlp\UDPDebug.hpj(1) : error:
+type "hlp\UDPDebug.log"
+:done
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5B.bat"
+Creating command line "rc.exe /l 0x409 /fo"Release/UDPDebug.res" /d "NDEBUG" /d "_AFXDLL" "P:\SHDesigns\Rabbit\UDPDebug\UDPDebug.rc"" 
+Copying contents file...
+        1 file(s) copied.
+Making help include file...
+Making help file...
+        1 file(s) copied.
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5C.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /D DATA_TYPE=int /Fp"Release/UDPDebug.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"P:\SHDesigns\Rabbit\UDPDebug\AddWDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildTFrame.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildTView.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildView.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildWFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\DumpDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\DumpMemDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\EditIntDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\EditVarDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\IPAddr.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\MainFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\PopupDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\Struct.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\Symbols.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\UDPDebug.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\WatchView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5C.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /D DATA_TYPE=int /Fo"Release/" /Fd"Release/" /FD /c 
+"P:\SHDesigns\Rabbit\UDPDebug\EQParse.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5D.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /D DATA_TYPE=int /Fp"Release/UDPDebug.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"P:\SHDesigns\Rabbit\UDPDebug\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5E.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/UDPDebug.pdb" /map:"Release/UDPDebug.map" /machine:I386 /out:"Release/UDPDebug.exe" 
+.\Release\AddWDlg.obj
+.\Release\ChildFrm.obj
+.\Release\ChildTFrame.obj
+.\Release\ChildTView.obj
+.\Release\ChildView.obj
+.\Release\ChildWFrm.obj
+.\Release\DumpDlg.obj
+.\Release\DumpMemDlg.obj
+.\Release\EditIntDlg.obj
+.\Release\EditVarDlg.obj
+.\Release\EQParse.obj
+.\Release\IPAddr.obj
+.\Release\MainFrm.obj
+.\Release\PopupDlg.obj
+.\Release\StdAfx.obj
+.\Release\Struct.obj
+.\Release\Symbols.obj
+.\Release\UDPDebug.obj
+.\Release\WatchView.obj
+.\Release\UDPDebug.res
+]
+Creating command line "link.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP5F.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AddWDlg.cpp
+ChildFrm.cpp
+ChildTFrame.cpp
+ChildTView.cpp
+ChildView.cpp
+ChildWFrm.cpp
+DumpDlg.cpp
+DumpMemDlg.cpp
+EditIntDlg.cpp
+EditVarDlg.cpp
+IPAddr.cpp
+MainFrm.cpp
+PopupDlg.cpp
+Struct.cpp
+Symbols.cpp
+UDPDebug.cpp
+WatchView.cpp
+Generating Code...
+Compiling...
+EQParse.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+UDPDebug.exe - 0 error(s), 0 warning(s)
+<h3>
+--------------------Configuration: UDPDebug - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP61.bat" with contents
+[
+@echo off
+copy "hlp\UDPDebug.cnt" .\Debug
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP61.bat"
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP62.bat" with contents
+[
+@echo off
+echo. >"hlp\UDPDebug.hm"
+echo // Commands (ID_* and IDM_*) >>"hlp\UDPDebug.hm"
+makehm ID_,HID_,0x10000 IDM_,HIDM_,0x10000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Prompts (IDP_*) >>"hlp\UDPDebug.hm"
+makehm IDP_,HIDP_,0x30000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Resources (IDR_*) >>"hlp\UDPDebug.hm"
+makehm IDR_,HIDR_,0x20000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Dialogs (IDD_*) >>"hlp\UDPDebug.hm"
+makehm IDD_,HIDD_,0x20000 resource.h >>"hlp\UDPDebug.hm"
+echo. >>"hlp\UDPDebug.hm"
+echo // Frame Controls (IDW_*) >>"hlp\UDPDebug.hm"
+makehm IDW_,HIDW_,0x50000 resource.h >>"hlp\UDPDebug.hm"
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP62.bat"
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP63.bat" with contents
+[
+@echo off
+start /wait hcw /C /E /M "hlp\UDPDebug.hpj"
+if errorlevel 1 goto :Error
+if not exist "hlp\UDPDebug.hlp" goto :Error
+copy "hlp\UDPDebug.hlp" .\Debug
+goto :done
+:Error
+echo hlp\UDPDebug.hpj(1) : error:
+type "hlp\UDPDebug.log"
+:done
+]
+Creating command line "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP63.bat"
+Creating command line "rc.exe /l 0x409 /fo"Debug/UDPDebug.res" /d "_DEBUG" "P:\SHDesigns\Rabbit\UDPDebug\UDPDebug.rc"" 
+Copying contents file...
+        1 file(s) copied.
+Making help include file...
+Making help file...
+        1 file(s) copied.
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP64.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D DATA_TYPE=int /FR"Debug/" /Fp"Debug/UDPDebug.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"P:\SHDesigns\Rabbit\UDPDebug\AddWDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildTFrame.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildTView.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildView.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\ChildWFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\DumpDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\DumpMemDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\EditIntDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\EditVarDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\IPAddr.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\MainFrm.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\PopupDlg.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\Struct.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\Symbols.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\UDPDebug.cpp"
+"P:\SHDesigns\Rabbit\UDPDebug\WatchView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP64.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP65.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D DATA_TYPE=int /FR"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"P:\SHDesigns\Rabbit\UDPDebug\EQParse.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP65.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP66.tmp" with contents
+[
+/nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D DATA_TYPE=int /FR"Debug/" /Fp"Debug/UDPDebug.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"P:\SHDesigns\Rabbit\UDPDebug\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP66.tmp" 
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP67.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/UDPDebug.pdb" /debug /machine:I386 /out:"Debug/UDPDebug.exe" /pdbtype:sept 
+.\Debug\AddWDlg.obj
+.\Debug\ChildFrm.obj
+.\Debug\ChildTFrame.obj
+.\Debug\ChildTView.obj
+.\Debug\ChildView.obj
+.\Debug\ChildWFrm.obj
+.\Debug\DumpDlg.obj
+.\Debug\DumpMemDlg.obj
+.\Debug\EditIntDlg.obj
+.\Debug\EditVarDlg.obj
+.\Debug\EQParse.obj
+.\Debug\IPAddr.obj
+.\Debug\MainFrm.obj
+.\Debug\PopupDlg.obj
+.\Debug\StdAfx.obj
+.\Debug\Struct.obj
+.\Debug\Symbols.obj
+.\Debug\UDPDebug.obj
+.\Debug\WatchView.obj
+.\Debug\UDPDebug.res
+]
+Creating command line "link.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP67.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+AddWDlg.cpp
+ChildFrm.cpp
+ChildTFrame.cpp
+ChildTView.cpp
+ChildView.cpp
+ChildWFrm.cpp
+DumpDlg.cpp
+DumpMemDlg.cpp
+EditIntDlg.cpp
+EditVarDlg.cpp
+IPAddr.cpp
+MainFrm.cpp
+PopupDlg.cpp
+Struct.cpp
+Symbols.cpp
+UDPDebug.cpp
+WatchView.cpp
+Generating Code...
+Compiling...
+EQParse.cpp
+Linking...
+Creating temporary file "C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP69.tmp" with contents
+[
+/nologo /o"Debug/UDPDebug.bsc" 
+.\Debug\StdAfx.sbr
+.\Debug\AddWDlg.sbr
+.\Debug\ChildFrm.sbr
+.\Debug\ChildTFrame.sbr
+.\Debug\ChildTView.sbr
+.\Debug\ChildView.sbr
+.\Debug\ChildWFrm.sbr
+.\Debug\DumpDlg.sbr
+.\Debug\DumpMemDlg.sbr
+.\Debug\EditIntDlg.sbr
+.\Debug\EditVarDlg.sbr
+.\Debug\EQParse.sbr
+.\Debug\IPAddr.sbr
+.\Debug\MainFrm.sbr
+.\Debug\PopupDlg.sbr
+.\Debug\Struct.sbr
+.\Debug\Symbols.sbr
+.\Debug\UDPDebug.sbr
+.\Debug\WatchView.sbr]
+Creating command line "bscmake.exe @C:\DOCUME~1\shenion\LOCALS~1\Temp\RSP69.tmp"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+UDPDebug.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
